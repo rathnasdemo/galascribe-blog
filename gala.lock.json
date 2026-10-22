@@ -11,27 +11,27 @@
   },
   "schemas": {
     "package": "@rathnasgala2/schemas",
-    "version": "3.12.0",
-    "integrity": "sha256:56cb658ebe0f841437dc072e0bbd77ff78912acb1fbaccad3f040871c16e66ac",
+    "version": "3.16.0",
+    "integrity": "sha256:4e4e36254a07270086d46ec6e754ba02a88e438c9501ddfe3b0f4fe9f3196a7b",
     "registry": "https://registry.npmjs.org/",
     "contractVersion": "3.0.0",
     "compatibleWith": "^3.0.0"
   },
   "template": {
     "package": "@rathnasgala2/template",
-    "version": "4.3.0",
-    "integrity": "sha256:fdbb817d0b6dcea21ad9bec76fa241a7b3e34a70c9fb4f41c686e619a902310f",
+    "version": "4.4.1",
+    "integrity": "sha256:1d9249d488ea542646d903d5aa730c79c1a61c7291e8830b18ed39af4771d0e2",
     "registry": "https://registry.npmjs.org/",
-    "contractVersion": "4.0.0",
+    "contractVersion": "4.1.0",
     "compatibleWith": "^4.0.0",
     "templateModules": []
   },
   "theme": {
     "package": "@rathnasgala2/theme-minimal",
-    "version": "4.1.0",
-    "integrity": "sha256:1101af185789ffec2ea433418e7ffa5bb72c4f50672eedf7b775d3e5f73d504c",
+    "version": "4.2.0",
+    "integrity": "sha256:875c5f8e7d817622ac6e51443a96c4dd552a7a638114e91acaf836f8e93b1f2e",
     "registry": "https://registry.npmjs.org/",
-    "contractVersion": "4.0.0",
+    "contractVersion": "4.1.0",
     "compatibleWith": "^4.0.0"
   },
   "publisher": [
@@ -70,5 +70,5 @@
   ],
   "dependencies": [],
   "dependencyDag": [],
-  "lockDigest": "sha256:c921dfa3ce3e0041785864f37167fcfa4ec5d96130e2e0324a95cb21e84fb5f7"
+  "lockDigest": "sha256:986ecfeedafa4f313cdda85ccd750408e6d528fc6e0150732d42c0839877f9f9"
 }

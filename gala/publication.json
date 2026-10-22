@@ -9,5 +9,15 @@
   "defaultLanguage": "en-US",
   "authors": ["gala/authors/placeholder-author.json"],
   "socialLinks": [],
+  "policies": {
+    "terms": {
+      "title": "Terms",
+      "body": "gala/policies/terms.md"
+    },
+    "privacy": {
+      "title": "Privacy",
+      "body": "gala/policies/privacy.md"
+    }
+  },
   "extensions": {}
 }

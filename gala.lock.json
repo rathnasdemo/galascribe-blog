@@ -61,8 +61,8 @@
     },
     {
       "package": "@rathnasgala2/adapter-github-pages",
-      "version": "0.1.1",
-      "integrity": "sha256:ab1deb308aa6712baa2461c4aacae613f666fe7054a74817a60f980f74edf554",
+      "version": "0.1.2",
+      "integrity": "sha256:384c2ea89c2bf55828a0da7d6c0e5ecd2c7431546a3544d9e14661c2b11a878f",
       "registry": "https://registry.npmjs.org/",
       "contractVersion": "2.0.0",
       "compatibleWith": "^2.0.0"
@@ -70,5 +70,5 @@
   ],
   "dependencies": [],
   "dependencyDag": [],
-  "lockDigest": "sha256:3c3d2c1944183c7a6a8029d6d959bfb8f1cc1ed9a76fc12f9df745f17901d2b3"
+  "lockDigest": "sha256:a6cce1855ae2215df8cd6e638bffcef83e8a67d42c14c12129bbf131ca1c376a"
 }

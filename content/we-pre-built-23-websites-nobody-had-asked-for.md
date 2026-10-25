@@ -1,21 +1,22 @@
 ---
 schemaId: urn:gala:schema:content-frontmatter:2.0.0
-schemaVersion: 2.0.0
+schemaVersion: '2.0.0'
 id: 01a171d6-eb79-7591-aa47-670d83f924aa
 kind: article
 title: We pre-built 23 websites nobody had asked for
 description: Pre-building a preview site for every prospect burned half a week's model limit in four hours; the site is now built only when the creator clicks.
 language: en
 authors:
-- 01a15c65-9a71-782f-b76c-d0f002d9c6e5
+  - 01a15c65-9a71-782f-b76c-d0f002d9c6e5
 tags:
-- outreach
-- tokens
-- previews
-- automation
-- cost
-status: draft
+  - outreach
+  - tokens
+  - previews
+  - automation
+  - cost
+status: published
 createdAt: '2026-10-25T06:54:32.000Z'
+publishedAt: '2026-10-25T17:49:48.852Z'
 slug: we-pre-built-23-websites-nobody-had-asked-for
 redirects: []
 extensions: {}

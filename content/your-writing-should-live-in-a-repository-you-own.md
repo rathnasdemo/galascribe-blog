@@ -4,7 +4,8 @@ schemaVersion: 2.0.0
 id: 01a15c94-3083-785d-a0f3-2f37ebea1260
 kind: article
 title: Your writing should live in a repository you own
-description: Every Galascribe article is a Markdown file in a GitHub repository you own. Here is what that takes away from us, and why we built it that way anyway.
+description: Every Galascribe article is a Markdown file in a GitHub repository you
+  own. Here is what that takes away from us, and why we built it that way anyway.
 language: en
 authors:
 - 01a15c65-9a71-782f-b76c-d0f002d9c6e5
@@ -13,9 +14,9 @@ tags:
 - github
 - markdown
 - hosting
-status: draft
-publishAfter: '2026-10-25'
+status: published
 createdAt: '2026-10-21T03:49:38.000Z'
+publishedAt: '2026-10-25T07:00:34.375Z'
 slug: your-writing-should-live-in-a-repository-you-own
 redirects: []
 extensions: {}

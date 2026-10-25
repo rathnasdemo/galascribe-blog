@@ -14,6 +14,7 @@ tags:
 - github
 - preview
 status: draft
+publishAfter: '2026-11-06'
 createdAt: '2026-10-21T03:49:38.000Z'
 slug: write-preview-publish-how-a-post-becomes-a-page
 redirects: []
@@ -52,7 +53,9 @@ It is labelled a draft preview, with the words "Your published page may differ s
 
 ## Where a saved draft lives
 
-Once saved, your draft lives in your own site repository, on a change branch, and not in our database. Saving is two requests.
+Once saved, your draft lives in your own site repository, on a change branch, and not in our database. Before the first save, your text is kept on your device: the editor writes an encrypted copy to your browser's storage half a second after you stop typing, and at least every two seconds while you keep typing. The key stays in the browser, so this protects against casual inspection, not against someone using your device. If the browser blocks storage, as a private window does, the editor still works and says the draft cannot be kept on this device.
+
+Saving is two requests.
 
 The first, a plan, carries the document paths, the text and a digest of each, plus the repository revision you started from. The API writes each document into your repository as a git blob, unreferenced until a commit points at it, using a token limited to that one repository. Our database holds paths, blob ids, sizes and digests, and never what you wrote.
 
@@ -76,11 +79,11 @@ After the receipt, the deployment is in a state we call verifying, and a durable
 
 Because the API fetches from an address a person chose, the fetch is restrictive. It uses https on port 443, refuses any address that is not globally reachable, connects to the address it vetted, sends no credentials, follows at most three redirects within the same origin, and reads at most 64 KiB.
 
-Two limits, stated plainly. This is the first of three tiers in the design; checks of critical routes and of the whole inventory are not built as of the design document. And the design document records why the check exists: when it was written, nothing in production code ever moved a deployment to verified, and tests set that state by writing to the database.
+Two limits, stated plainly. This is the first of three tiers in the design; checks of critical routes and of the whole inventory are not built today. And the design document records why the check exists: when it was written, nothing in production code ever moved a deployment to verified, and tests set that state by writing to the database.
 
 ## One thing that broke
 
-The cause recorded in our content-journey incident review was a single mismatch. A proposed version of a post is addressed by a revision, and the contract carries that revision in a tagged wire form. The admission check against the database compared it without normalising it first, so the two disagreed about the same revision.
+The cause recorded in our content-journey incident review was a single mismatch. A proposed version of a post is addressed by a revision, and the contract carries that revision in a tagged wire form. The admission check against the database compared it without normalising it first, so the two disagreed about the same revision. On the wire a revision is written `sha1:` followed by the 40 hexadecimal characters of a git object id.
 
 The review's checklist runs in this order. We reproduced the mismatch with a failing API test, then made the API normalise the revision before database admission while keeping the tagged value on the wire. Nineteen targeted API document and asset tests passed, with formatting and style checks, and 183 browser checks across the source, content, review, release and publish journeys passed, at desktop and mobile widths where applicable. The fixed API image was promoted to production, and the image being served and an API canary were verified. One item was still open when the review was written: a signed-in person clicking the proposed-version link in production, which needs a real user session.
 

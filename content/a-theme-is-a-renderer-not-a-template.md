@@ -14,6 +14,7 @@ tags:
 - toolchain
 - lockfile
 status: draft
+publishAfter: '2026-11-08'
 createdAt: '2026-10-21T04:12:17.000Z'
 slug: a-theme-is-a-renderer-not-a-template
 redirects: []
@@ -41,11 +42,11 @@ Which theme builds your site? The lock file in your site repository decides, not
 
 Before it renders anything, the template treats the theme as lower-trust input than your own writing. `theme.json` is validated against the theme contract schema first. Its `contractVersion`, `stylingContractDigest` and `templateRange` are checked against the template's own styling contract. Every declared file's length and SHA-256 is compared with the bytes read, and the theme's size budgets are enforced.
 
-While writing the design below we found a gap in how the theme folder is located. As of our design note of 12 October, the resolver looked first in the repository's own `node_modules` and checked only name and version strings, so a theme folder committed by an author would render while the provenance still named the registry digest. The design closes it by resolving themes for managed builds only from the toolchain's own install.
+While writing the design below we found a gap in how the theme folder is located. As of our design note of 12 October, the resolver looked first in the repository's own `node_modules` and checked only name and version strings, so a theme folder committed by an author would render while the provenance still named the registry digest. The design recommends closing it by resolving themes for managed builds only from the toolchain's own install. That change has not shipped.
 
-## Two generations at once
+## Two generations at once (a proposal)
 
-This mattered the day the toolchain moved to generation 4. It could no longer build the two sites still on generation 3, and we migrated them by hand. The toolchain could hold only one version of each theme package: one catalog row per package, one directory per name, an exact version check. A second step did the actual damage, the sweep that moves every site's publish workflow to the newest toolchain pin.
+None of this is built yet. Today the toolchain serves one generation, and a site on the previous one has to be migrated by hand. This mattered the day the toolchain moved to generation 4. It could no longer build the two sites still on generation 3, and we migrated them by hand. The toolchain could hold only one version of each theme package: one catalog row per package, one directory per name, an exact version check. A second step did the actual damage, the sweep that moves every site's publish workflow to the newest toolchain pin.
 
 The goal we wrote down: a toolchain update never breaks a live site, and a site changes generation only when a person asks.
 
@@ -89,4 +90,4 @@ A site here lives in your repository and builds in a workflow you can read. If t
 
 Splitting the page from its values has a second payoff: a theme becomes checkable data, so what a theme may contain can be tested before it ships.
 
-To see what a site built this way looks like, the demo site is at https://demo.galascribe.com/henry-stewart/
+To start a site of your own, the start flow is at https://app.galascribe.com/

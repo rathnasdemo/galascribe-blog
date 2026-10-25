@@ -14,6 +14,7 @@ tags:
 - markdown
 - hosting
 status: draft
+publishAfter: '2026-10-25'
 createdAt: '2026-10-21T03:49:38.000Z'
 slug: your-writing-should-live-in-a-repository-you-own
 redirects: []
@@ -80,10 +81,10 @@ Put together, that is fewer levers. We cannot hold your content, we cannot hold 
 
 ## Why we chose it anyway
 
-The constraint is also a discipline. If everything Galascribe needs is in the files, then the files are the source of truth, and any feature that needs hidden state has to justify itself. Likes and comments are the one place we had to, and we say so above rather than burying it.
+The constraint is also a discipline. If everything Galascribe needs is in the files, then the files are the source of truth, and any feature that needs hidden state has to justify itself. Likes and comments are the one place we had to, and we say so above rather than burying it. I built it this way for the reason in our tagline: you should own every word you write, and I do not want your archive to depend on whether Galascribe is still around.
 
 A post is a long-lived thing. Plain Markdown and JSON in a git repository can be opened by any editor, with or without us. To us that seemed a more durable thing to hand a writer than an export button.
 
 It also narrows what you have to trust us with. GitHub holds the repository and enforces who can touch it, and GitHub's own build minutes do the publishing. What you grant us is a set of permissions for the Galascribe GitHub App in your own account, not custody of your work.
 
-If you want to see the published end of this layout, there is a demo site at https://demo.galascribe.com/henry-stewart/.
+To start a site of your own, the start flow is at https://app.galascribe.com/

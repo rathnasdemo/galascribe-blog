@@ -14,6 +14,7 @@ tags:
 - contrast
 - darkmode
 status: draft
+publishAfter: '2026-11-13'
 createdAt: '2026-10-21T04:12:17.000Z'
 slug: 116-tokens-a-default-theme-for-light-dark-and-a-phone
 redirects: []
@@ -64,7 +65,7 @@ One mistake is worth owning. Look, the page where a creator styles a site, has a
 
 ## The phone, and no script
 
-We audited the designs in a real browser instead of trusting static checks. The audit ran at widths from 320 to 1440 pixels, with touch and landscape variants, and asserted row counts, overflow, overlap and tap-target sizes. It caught a header and a dock that wrapped, which the static checks had missed.
+We audited the designs in a real browser instead of trusting static checks, at 320, 360, 390, 414, 768, 820, 1024 (touch) and 1440 pixels and on a phone on its side at 844 by 390. It asserted rows, overflow, overlap and tap-target sizes, and it caught the header and the reaction bar (the row with Like and the emoji reactions) wrapping onto two lines, which the static checks had missed.
 
 The header's mobile menu is a `<details>` element, which opens and closes without script. The contents list comes from the article's second-level headings when there are at least two. A card without a cover image gets a placeholder painted from tokens. Everything the script adds degrades to plain links or `<details>` when it is off.
 
@@ -86,8 +87,8 @@ That has a visible cost: a pure yellow accent gives olive links. In our calculat
 
 The check runs in five places: in the app while a creator picks, where a failing role shows its ratio; in the API at save, which checks shape, lowercase hex, the background band and text on background; in the template at render, which is the authority and refuses the build with `APPEARANCE_PALETTE_CONTRAST`, naming the pair, the mode and the ratio; at theme release, against a stress corpus of palettes; and in a test that runs every preset and every theme's default palette through all six themes in both modes.
 
-Every preset's pass through each theme's bindings is proved by that test, not by arithmetic, and a failing preset is retuned before it ships.
+Every preset's pass through each theme's bindings is proved by that test, not by arithmetic, and a failing preset is retuned before it ships, with the one exception noted below.
 
-A contrast audit found zero violations, with one preset's glow borderline.
+A contrast audit found zero violations. By hand we measured one preset, Graphite, at 4.05 to 4.25:1 for muted meta text over the page glow in two themes, below our 4.5:1 aim, and it is not fixed yet.
 
 To set up a site and try the colour choices in Look, the start flow is at https://app.galascribe.com/

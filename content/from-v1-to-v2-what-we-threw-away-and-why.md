@@ -14,6 +14,7 @@ tags:
 - migration
 - ux
 status: draft
+publishAfter: '2026-11-01'
 createdAt: '2026-10-21T03:49:38.000Z'
 slug: from-v1-to-v2-what-we-threw-away-and-why
 redirects: []
@@ -46,15 +47,15 @@ The governing rule is short: if the system can decide correctly, it must not ask
 
 ## Deleting it rather than keeping both
 
-The rebuilt UI first lived under a path of its own while the first one stayed at the root. Later the roles swapped: the rebuilt UI moved to the root and the old one moved to a path of its own. On 2026-10-18 we deleted the old one outright.
+The rebuilt UI first lived under a path of its own while the first one stayed at the root. Later the roles swapped: the rebuilt UI moved to the root and the old one moved to a path of its own. On 2026-10-18 we deleted the old one outright. I deleted it because two interfaces meant twice the code to keep right. I wanted one decent interface, so we moved across every page that mattered and dropped the rest.
 
 Running both left marks that we are still removing: comments about the rebuilt UI's early base path, style checks that skipped its folder, and copy that referred to a "second UI".
 
-Old addresses were the part we did not want to break. The 2026-09-30 inventory lists routes such as `/organizations/{id}/publications` and `/invitations/{id}/accept`, the kind of address someone may have bookmarked or been sent. A table of 301 redirects now answers the old addresses. An address that is in neither interface gets a real 404, never a silent redirect; that was already the rule for unknown routes.
+Old addresses were the part we did not want to break. The 2026-09-30 inventory lists routes such as `/organizations/{id}/publications`, the kind of address someone may have bookmarked or been sent; that one goes to `/orgs/{id}`. A short set of rules at our edge answers old addresses with a permanent redirect: `/v1/...` and `/v0/...` lose their prefix, `/organizations/<id>` goes to `/orgs/<id>`, an old operations address goes to the Activity page, and `/account/security` goes to the Security card. An address that is in neither interface gets a real 404, never a silent redirect; that was already the rule for unknown routes.
 
 ## What changed in the model, and what did not
 
-In the API a site is a publication, and the interface calls it a site. A publication has a destination, the place its built output goes. GitHub Pages is the only destination; the API call that edits a publication's destination is on our list of wrappers no screen uses.
+In the API a site is a publication, and the interface calls it a site. A publication has a destination, the place its built output goes. GitHub Pages is the only destination we offer. The contract still describes two others, DigitalOcean Spaces and a local directory, and no screen edits a destination. Account export and account closure, which the first UI showed as unavailable, work in the rebuilt one, and so does transferring an organisation.
 
 Most of what mattered did not change, and that is why we could replace the interface rather than the system:
 
@@ -63,7 +64,7 @@ Most of what mattered did not change, and that is why we could replace the inter
 - A change is still a pull request in your site repository.
 - The API is not versioned. Every backend change for the rebuilt UI was additive: a publishing policy, publishing several changes in one action, a site summary read, a readable history, restore limited to versions that were live, and one pending change per path.
 
-The contract stood at version 3.15.0 at our last inventory.
+The contract stood at version 3.15.0 at our last inventory and is at 3.19.0 now.
 
 ## What we dropped
 
@@ -73,9 +74,7 @@ Deliberately, with the old UI:
 - The content and source views built on the old model.
 - Editing of publishing destinations other than GitHub Pages.
 
-Cut from the rebuilt UI because no API stands behind them: account export and account closure. We would rather have no button than one that says "unavailable".
-
-Deferred on purpose, with nothing half-built: newsletter, payments, a command-line tool, hreflang, a navigation editor, per-author SEO, theme font pairing and density, and layout variants.
+Deferred on purpose, with nothing half-built: newsletter, a command-line tool, hreflang, a navigation editor, per-author SEO, theme font pairing and density, and layout variants. Payments were on this list when we first drafted this post; a pricing page with a Stripe table shipped on 2026-10-22.
 
 ## What the seams still show
 
@@ -88,4 +87,4 @@ Deleting the screens did not delete everything they left behind. Our own invento
 
 The cleanup list is ranked and most of it needs no decision, only time. We would rather print the list than let the deleted interface go on shaping what we say.
 
-To see what a site looks like at the end of all this, the demo is at https://demo.galascribe.com/henry-stewart/
+To start a site of your own, the start flow is at https://app.galascribe.com/

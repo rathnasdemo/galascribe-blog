@@ -14,6 +14,7 @@ tags:
 - metadata
 - authoring
 status: draft
+publishAfter: '2026-11-20'
 createdAt: '2026-10-21T04:12:17.000Z'
 slug: seo-you-do-not-have-to-think-about
 redirects: []
@@ -81,7 +82,7 @@ The first failure was easy to miss. The settings saved, but the publish step ref
 
 The second was in the editor. Reopening a published post from a device draft dropped its reference to the published version, so the redirect note, the redirects and the updated time were skipped, and after Publish the app wrongly said it could not reach Galascribe. The editor now attaches that reference on every draft restore. A rename in our test harness also stalled, because its stand-in for GitHub could not apply deletions; real GitHub can. The app now says a slow commit is still saving instead of claiming it is offline.
 
-Fixed, here, means released and checked on a local stack: the renderer changes are in template 4.3.0 and the contract changes in schemas 3.12.0. The check that remains is a republish of the live test site followed by a request for every sitemap entry.
+Fixed, here, means released and checked on a local stack: the renderer changes are in template 4.3.0 and the contract changes in schemas 3.12.0. We then built this blog on the same renderer and requested every address in its sitemap: all 13 answered 200 with no redirect, and every canonical link matched the address it was served from.
 
 ## What we left out
 

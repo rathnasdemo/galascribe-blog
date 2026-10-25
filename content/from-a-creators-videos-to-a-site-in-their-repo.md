@@ -14,6 +14,7 @@ tags:
 - handover
 - github
 status: draft
+publishAfter: '2026-10-30'
 createdAt: '2026-10-21T03:49:38.000Z'
 slug: from-a-creators-videos-to-a-site-in-their-repo
 redirects: []
@@ -43,7 +44,7 @@ Onboarding from a channel is operator-run today. We run these steps ourselves, o
 
 ## Drafting from the creator's own words
 
-A language model writes each article from its transcript, following rules we keep in a versioned file. We wrote the rules down from the three samples on the demo site.
+A language model writes each article from its transcript, following rules we keep in a versioned file. We wrote the rules down from the three samples on the demo site. The three articles on the demo were written by hand first, and the rules below came from them. We have not yet regenerated them with the pipeline to see whether they pass every check; that run waits for the next creator who says yes.
 
 - Only what the video says. No outside facts.
 - First person, in the creator's voice.
@@ -66,7 +67,7 @@ The home page has Home, Journal and About, a tag list with counts, search, a lig
 
 ## Who approves what
 
-The three sample articles go live on a demo address that Galascribe owns, with no per-article approval from the creator. The automatic checks above are the only gate: a draft that fails is not landed at all.
+The three sample articles go live on a demo address that Galascribe owns, with no per-article approval from the creator at this stage. Our automatic checks are the only gate in the software: a draft that fails is not landed at all. We also read the drafts ourselves before a demo goes live.
 
 The step after a claim is not built. The pipeline design imagines new videos arriving as drafts for the creator to review and publish, but today nothing in Galascribe proposes new articles to a creator once a site is claimed. From then on the site is the creator's to write in.
 
@@ -82,7 +83,7 @@ The creator makes a GitHub organisation (we recommend one just for Galascribe), 
 
 The change that sets the new address, rewrites the description to a neutral default and removes the preview notice from the About page is planned and confirmed in the creator's own session. A change should stay a person's act. Likes and comments are tied to the publication and article rather than to a web address, so the ones left on the preview survive the move.
 
-The result we test for is a site at the creator's own `github.io` address, with canonical links, sitemap and og:url on the new address, no preview notice, search engines allowed, and the next publish working from their account. A creator can then move the site to a domain they own from its Domain page, which shows the exact DNS records and checks them; a later post covers that.
+The result we test for is a site at the creator's own `github.io` address, with canonical links, sitemap and og:url on the new address, no preview notice, search engines allowed, and the next publish working from their account. A creator can then move the site to a domain they own from its Domain page, which shows the exact DNS records and checks them; a later post covers that. We have run the claim and the move end to end on demo sites for a channel we own; no creator has done it yet.
 
 ## Where it runs out
 
@@ -92,4 +93,4 @@ Captions mishear proper nouns. We list corrections and mark uncertain ones, but 
 
 Softening crude phrasing is an editorial hand on someone else's words, which is why every change is listed. Math is not rendered. And creators cannot start the route on their own.
 
-Read the three articles and judge the result for yourself: https://demo.galascribe.com/henry-stewart/
+To start a site of your own, the start flow is at https://app.galascribe.com/

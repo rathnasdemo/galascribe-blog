@@ -12,11 +12,11 @@
   "policies": {
     "terms": {
       "title": "Terms",
-      "body": "gala/policies/terms.md"
+      "body": "gala/theme-pages/terms.md"
     },
     "privacy": {
       "title": "Privacy",
-      "body": "gala/policies/privacy.md"
+      "body": "gala/theme-pages/privacy.md"
     }
   },
   "extensions": {}

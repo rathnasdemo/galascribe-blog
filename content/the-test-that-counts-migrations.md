@@ -18,6 +18,10 @@ publishAfter: '2027-03-07'
 createdAt: '2026-10-25T17:12:26.000Z'
 slug: the-test-that-counts-migrations
 redirects: []
+listen:
+  audio: assets/listen/the-test-that-counts-migrations.mp3
+  durationSeconds: 379
+  format: conversation
 extensions: {}
 ---
 

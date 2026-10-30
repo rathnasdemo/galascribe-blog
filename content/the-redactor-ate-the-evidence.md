@@ -18,6 +18,10 @@ publishAfter: '2027-03-19'
 createdAt: '2026-10-25T17:12:26.000Z'
 slug: the-redactor-ate-the-evidence
 redirects: []
+listen:
+  audio: assets/listen/the-redactor-ate-the-evidence.mp3
+  durationSeconds: 368
+  format: conversation
 extensions: {}
 ---
 

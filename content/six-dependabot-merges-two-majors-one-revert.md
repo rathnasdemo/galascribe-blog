@@ -18,6 +18,10 @@ publishAfter: '2027-03-05'
 createdAt: '2026-10-25T17:12:26.000Z'
 slug: six-dependabot-merges-two-majors-one-revert
 redirects: []
+listen:
+  audio: assets/listen/six-dependabot-merges-two-majors-one-revert.mp3
+  durationSeconds: 362
+  format: conversation
 extensions: {}
 ---
 

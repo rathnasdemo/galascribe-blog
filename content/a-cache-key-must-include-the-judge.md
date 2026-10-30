@@ -18,6 +18,10 @@ publishAfter: '2027-03-21'
 createdAt: '2026-10-25T17:12:26.000Z'
 slug: a-cache-key-must-include-the-judge
 redirects: []
+listen:
+  audio: assets/listen/a-cache-key-must-include-the-judge.mp3
+  durationSeconds: 366
+  format: conversation
 extensions: {}
 ---
 

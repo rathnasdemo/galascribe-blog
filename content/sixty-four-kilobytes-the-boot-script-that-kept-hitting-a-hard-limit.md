@@ -18,6 +18,10 @@ publishAfter: '2027-03-26'
 createdAt: '2026-10-25T17:12:57.000Z'
 slug: sixty-four-kilobytes-the-boot-script-that-kept-hitting-a-hard-limit
 redirects: []
+listen:
+  audio: assets/listen/sixty-four-kilobytes-the-boot-script-that-kept-hitting-a-hard-limit.mp3
+  durationSeconds: 407
+  format: conversation
 extensions: {}
 ---
 

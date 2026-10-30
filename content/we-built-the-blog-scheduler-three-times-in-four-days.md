@@ -18,6 +18,10 @@ publishAfter: '2027-03-14'
 createdAt: '2026-10-25T17:12:26.000Z'
 slug: we-built-the-blog-scheduler-three-times-in-four-days
 redirects: []
+listen:
+  audio: assets/listen/we-built-the-blog-scheduler-three-times-in-four-days.mp3
+  durationSeconds: 389
+  format: conversation
 extensions: {}
 ---
 

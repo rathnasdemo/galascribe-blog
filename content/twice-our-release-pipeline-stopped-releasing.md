@@ -18,6 +18,10 @@ publishAfter: '2027-03-12'
 createdAt: '2026-10-25T17:12:26.000Z'
 slug: twice-our-release-pipeline-stopped-releasing
 redirects: []
+listen:
+  audio: assets/listen/twice-our-release-pipeline-stopped-releasing.mp3
+  durationSeconds: 414
+  format: conversation
 extensions: {}
 ---
 

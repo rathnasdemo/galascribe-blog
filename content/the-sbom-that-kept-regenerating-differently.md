@@ -18,6 +18,10 @@ publishAfter: '2027-03-28'
 createdAt: '2026-10-25T17:12:26.000Z'
 slug: the-sbom-that-kept-regenerating-differently
 redirects: []
+listen:
+  audio: assets/listen/the-sbom-that-kept-regenerating-differently.mp3
+  durationSeconds: 390
+  format: conversation
 extensions: {}
 ---
 

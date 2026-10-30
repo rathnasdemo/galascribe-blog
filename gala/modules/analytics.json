@@ -1,0 +1,11 @@
+{
+  "schemaId": "urn:gala:schema:analytics-config:2.0.0",
+  "schemaVersion": "2.0.0",
+  "provider": {
+    "kind": "google-analytics-4",
+    "measurementId": "G-DDXRRPDFCZ"
+  },
+  "consent": {
+    "policy": "opt-in"
+  }
+}

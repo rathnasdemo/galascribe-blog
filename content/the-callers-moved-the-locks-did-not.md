@@ -18,6 +18,10 @@ publishAfter: '2027-01-10'
 createdAt: '2026-10-25T04:01:09.000Z'
 slug: the-callers-moved-the-locks-did-not
 redirects: []
+listen:
+  audio: assets/listen/the-callers-moved-the-locks-did-not.mp3
+  durationSeconds: 411
+  format: conversation
 extensions: {}
 ---
 

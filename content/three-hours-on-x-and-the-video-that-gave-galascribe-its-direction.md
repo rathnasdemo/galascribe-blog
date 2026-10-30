@@ -18,6 +18,10 @@ publishedAt: '2026-10-29T06:19:33.000Z'
 createdAt: '2026-10-29T06:19:21.000Z'
 slug: three-hours-on-x-and-the-video-that-gave-galascribe-its-direction
 redirects: []
+listen:
+  audio: assets/listen/three-hours-on-x-and-the-video-that-gave-galascribe-its-direction.mp3
+  durationSeconds: 424
+  format: conversation
 extensions: {}
 ---
 

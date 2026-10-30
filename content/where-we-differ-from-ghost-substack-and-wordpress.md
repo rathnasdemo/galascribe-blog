@@ -18,6 +18,10 @@ publishAfter: '2026-11-22'
 createdAt: '2026-10-25T04:01:09.000Z'
 slug: where-we-differ-from-ghost-substack-and-wordpress
 redirects: []
+listen:
+  audio: assets/listen/where-we-differ-from-ghost-substack-and-wordpress.mp3
+  durationSeconds: 425
+  format: conversation
 extensions: {}
 ---
 

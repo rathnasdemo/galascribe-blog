@@ -19,6 +19,10 @@ createdAt: '2026-10-21T03:49:38.000Z'
 publishedAt: '2026-10-25T07:00:34.375Z'
 slug: your-writing-should-live-in-a-repository-you-own
 redirects: []
+listen:
+  audio: assets/listen/your-writing-should-live-in-a-repository-you-own.mp3
+  durationSeconds: 383
+  format: conversation
 extensions: {}
 ---
 A Galascribe site is a folder of Markdown files in a GitHub repository that belongs to the person who wrote them, published by default through GitHub Pages from that same repository. We call it the site repository. Neither the content nor the hosting is ours to hold, and that is deliberate. This post covers what the site repository holds, what we give up by building it this way, and why we accepted the trade.

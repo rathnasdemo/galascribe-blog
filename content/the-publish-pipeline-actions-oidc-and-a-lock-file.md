@@ -18,6 +18,10 @@ publishAfter: '2026-11-29'
 createdAt: '2026-10-25T04:01:09.000Z'
 slug: the-publish-pipeline-actions-oidc-and-a-lock-file
 redirects: []
+listen:
+  audio: assets/listen/the-publish-pipeline-actions-oidc-and-a-lock-file.mp3
+  durationSeconds: 410
+  format: conversation
 extensions: {}
 ---
 

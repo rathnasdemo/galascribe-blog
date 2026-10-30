@@ -18,6 +18,10 @@ publishAfter: '2027-01-31'
 createdAt: '2026-10-25T04:01:09.000Z'
 slug: a-css-reset-that-outranked-our-components
 redirects: []
+listen:
+  audio: assets/listen/a-css-reset-that-outranked-our-components.mp3
+  durationSeconds: 386
+  format: conversation
 extensions: {}
 ---
 

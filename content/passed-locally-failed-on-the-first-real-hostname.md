@@ -18,6 +18,10 @@ publishAfter: '2027-02-28'
 createdAt: '2026-10-25T17:12:57.000Z'
 slug: passed-locally-failed-on-the-first-real-hostname
 redirects: []
+listen:
+  audio: assets/listen/passed-locally-failed-on-the-first-real-hostname.mp3
+  durationSeconds: 353
+  format: conversation
 extensions: {}
 ---
 

@@ -18,6 +18,10 @@ publishAfter: '2027-04-09'
 createdAt: '2026-10-25T17:12:26.000Z'
 slug: save-then-401
 redirects: []
+listen:
+  audio: assets/listen/save-then-401.mp3
+  durationSeconds: 371
+  format: conversation
 extensions: {}
 ---
 

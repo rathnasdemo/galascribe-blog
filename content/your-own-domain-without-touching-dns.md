@@ -19,6 +19,10 @@ publishAfter: '2026-11-27'
 createdAt: '2026-10-25T04:01:09.000Z'
 slug: your-own-domain-without-touching-dns
 redirects: []
+listen:
+  audio: assets/listen/your-own-domain-without-touching-dns.mp3
+  durationSeconds: 418
+  format: conversation
 extensions: {}
 ---
 

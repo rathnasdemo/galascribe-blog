@@ -18,6 +18,10 @@ publishAfter: '2026-12-06'
 createdAt: '2026-10-25T04:01:09.000Z'
 slug: revamping-the-ui-thirteen-journeys-and-a-coherence-audit
 redirects: []
+listen:
+  audio: assets/listen/revamping-the-ui-thirteen-journeys-and-a-coherence-audit.mp3
+  durationSeconds: 403
+  format: conversation
 extensions: {}
 ---
 

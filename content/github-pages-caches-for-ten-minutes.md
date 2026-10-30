@@ -18,6 +18,10 @@ publishAfter: '2027-01-03'
 createdAt: '2026-10-25T04:01:09.000Z'
 slug: github-pages-caches-for-ten-minutes
 redirects: []
+listen:
+  audio: assets/listen/github-pages-caches-for-ten-minutes.mp3
+  durationSeconds: 340
+  format: conversation
 extensions: {}
 ---
 

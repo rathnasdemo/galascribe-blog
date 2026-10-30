@@ -18,6 +18,10 @@ publishAfter: '2027-02-19'
 createdAt: '2026-10-25T17:12:26.000Z'
 slug: the-compatibility-check-that-only-checked-itself
 redirects: []
+listen:
+  audio: assets/listen/the-compatibility-check-that-only-checked-itself.mp3
+  durationSeconds: 348
+  format: conversation
 extensions: {}
 ---
 

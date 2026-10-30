@@ -18,6 +18,10 @@ publishAfter: '2026-11-08'
 createdAt: '2026-10-21T04:12:17.000Z'
 slug: a-theme-is-a-renderer-not-a-template
 redirects: []
+listen:
+  audio: assets/listen/a-theme-is-a-renderer-not-a-template.mp3
+  durationSeconds: 402
+  format: conversation
 extensions: {}
 ---
 A Galascribe site is built from three parts that know little about each other: your content, a theme, and the renderer we call the template, the package that builds your pages. Most of our decisions about themes come down to who is allowed to decide what. This post covers the division we settled on, how a build chooses its theme, and what the division costs us.

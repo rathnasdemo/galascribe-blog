@@ -18,6 +18,10 @@ publishAfter: '2026-11-01'
 createdAt: '2026-10-21T03:49:38.000Z'
 slug: from-v1-to-v2-what-we-threw-away-and-why
 redirects: []
+listen:
+  audio: assets/listen/from-v1-to-v2-what-we-threw-away-and-why.mp3
+  durationSeconds: 423
+  format: conversation
 extensions: {}
 ---
 Galascribe has had two generations. The earlier product, v1, had a public API that took a key in an `X-Gala-API-Key` header and offered read-only "published" scopes, and its sites were published from a headless API. The current platform, v2, works the other way round: a site is a set of files in a repository you own, built and published to GitHub Pages.

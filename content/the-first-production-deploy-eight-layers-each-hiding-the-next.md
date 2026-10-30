@@ -18,6 +18,10 @@ publishAfter: '2027-02-07'
 createdAt: '2026-10-25T17:12:57.000Z'
 slug: the-first-production-deploy-eight-layers-each-hiding-the-next
 redirects: []
+listen:
+  audio: assets/listen/the-first-production-deploy-eight-layers-each-hiding-the-next.mp3
+  durationSeconds: 421
+  format: conversation
 extensions: {}
 ---
 

@@ -18,6 +18,10 @@ publishAfter: '2027-04-02'
 createdAt: '2026-10-25T17:12:26.000Z'
 slug: files-in-a-template-repo-are-product
 redirects: []
+listen:
+  audio: assets/listen/files-in-a-template-repo-are-product.mp3
+  durationSeconds: 344
+  format: conversation
 extensions: {}
 ---
 

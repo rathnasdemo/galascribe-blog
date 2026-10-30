@@ -18,6 +18,10 @@ publishAfter: '2026-12-20'
 createdAt: '2026-10-25T04:01:09.000Z'
 slug: outreach-without-spam-five-emails-a-day
 redirects: []
+listen:
+  audio: assets/listen/outreach-without-spam-five-emails-a-day.mp3
+  durationSeconds: 419
+  format: conversation
 extensions: {}
 ---
 

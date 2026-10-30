@@ -18,6 +18,10 @@ publishAfter: '2027-01-17'
 createdAt: '2026-10-25T04:01:09.000Z'
 slug: 364-findings-from-reviewing-our-own-code
 redirects: []
+listen:
+  audio: assets/listen/364-findings-from-reviewing-our-own-code.mp3
+  durationSeconds: 368
+  format: conversation
 extensions: {}
 ---
 

@@ -18,6 +18,10 @@ publishAfter: '2027-01-22'
 createdAt: '2026-10-25T04:01:09.000Z'
 slug: scheduling-a-post-is-not-scheduling-a-publish
 redirects: []
+listen:
+  audio: assets/listen/scheduling-a-post-is-not-scheduling-a-publish.mp3
+  durationSeconds: 383
+  format: conversation
 extensions: {}
 ---
 

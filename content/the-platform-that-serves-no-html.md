@@ -18,6 +18,10 @@ publishAfter: '2026-12-27'
 createdAt: '2026-10-25T04:01:09.000Z'
 slug: the-platform-that-serves-no-html
 redirects: []
+listen:
+  audio: assets/listen/the-platform-that-serves-no-html.mp3
+  durationSeconds: 412
+  format: conversation
 extensions: {}
 ---
 

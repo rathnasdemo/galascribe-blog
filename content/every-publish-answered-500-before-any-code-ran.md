@@ -18,6 +18,10 @@ publishAfter: '2027-04-18'
 createdAt: '2026-10-25T17:12:26.000Z'
 slug: every-publish-answered-500-before-any-code-ran
 redirects: []
+listen:
+  audio: assets/listen/every-publish-answered-500-before-any-code-ran.mp3
+  durationSeconds: 361
+  format: conversation
 extensions: {}
 ---
 

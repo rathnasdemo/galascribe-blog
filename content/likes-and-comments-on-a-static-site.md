@@ -18,6 +18,10 @@ publishAfter: '2026-11-15'
 createdAt: '2026-10-21T04:12:17.000Z'
 slug: likes-and-comments-on-a-static-site
 redirects: []
+listen:
+  audio: assets/listen/likes-and-comments-on-a-static-site.mp3
+  durationSeconds: 375
+  format: conversation
 extensions: {}
 ---
 A Galascribe site is a folder of files served by GitHub Pages, and a built page used to make no request to anything but its own files; its content-security policy said so. We deferred likes and comments in an early plan, then reversed that: they are core to what we are building. Files cannot add a like to a count, cannot tell who is pressing the button, and cannot slow down someone who presses it a thousand times. Something outside the site has to do those jobs. This post describes how it works, from the build specification we wrote on 8 October 2026, and what we left out.

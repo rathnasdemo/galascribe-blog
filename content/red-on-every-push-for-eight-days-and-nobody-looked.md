@@ -18,6 +18,10 @@ publishAfter: '2027-02-26'
 createdAt: '2026-10-25T17:12:26.000Z'
 slug: red-on-every-push-for-eight-days-and-nobody-looked
 redirects: []
+listen:
+  audio: assets/listen/red-on-every-push-for-eight-days-and-nobody-looked.mp3
+  durationSeconds: 353
+  format: conversation
 extensions: {}
 ---
 

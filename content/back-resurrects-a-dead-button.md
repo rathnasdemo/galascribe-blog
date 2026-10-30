@@ -18,6 +18,10 @@ publishAfter: '2027-04-23'
 createdAt: '2026-10-25T17:12:26.000Z'
 slug: back-resurrects-a-dead-button
 redirects: []
+listen:
+  audio: assets/listen/back-resurrects-a-dead-button.mp3
+  durationSeconds: 330
+  format: conversation
 extensions: {}
 ---
 

@@ -18,6 +18,10 @@ publishAfter: '2026-11-13'
 createdAt: '2026-10-21T04:12:17.000Z'
 slug: 116-tokens-a-default-theme-for-light-dark-and-a-phone
 redirects: []
+listen:
+  audio: assets/listen/116-tokens-a-default-theme-for-light-dark-and-a-phone.mp3
+  durationSeconds: 398
+  format: conversation
 extensions: {}
 ---
 Our default theme was a skin over a fixed page. When I approved a new design for it, five decisions shaped what followed. This post covers what they produced: a closed list of 116 typed tokens, a light and a dark value for each, and a way for a creator to pick their own colours without making the page unreadable.

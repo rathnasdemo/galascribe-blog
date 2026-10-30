@@ -18,6 +18,10 @@ publishAfter: '2026-12-13'
 createdAt: '2026-10-25T04:01:09.000Z'
 slug: a-contact-email-with-consent
 redirects: []
+listen:
+  audio: assets/listen/a-contact-email-with-consent.mp3
+  durationSeconds: 405
+  format: conversation
 extensions: {}
 ---
 

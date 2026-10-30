@@ -18,6 +18,10 @@ publishAfter: '2026-12-11'
 createdAt: '2026-10-25T04:01:09.000Z'
 slug: we-build-your-site-first-then-you-claim-it
 redirects: []
+listen:
+  audio: assets/listen/we-build-your-site-first-then-you-claim-it.mp3
+  durationSeconds: 417
+  format: conversation
 extensions: {}
 ---
 

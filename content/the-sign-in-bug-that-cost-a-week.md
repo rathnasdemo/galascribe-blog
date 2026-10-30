@@ -18,6 +18,10 @@ publishAfter: '2026-12-04'
 createdAt: '2026-10-25T04:01:09.000Z'
 slug: the-sign-in-bug-that-cost-a-week
 redirects: []
+listen:
+  audio: assets/listen/the-sign-in-bug-that-cost-a-week.mp3
+  durationSeconds: 423
+  format: conversation
 extensions: {}
 ---
 

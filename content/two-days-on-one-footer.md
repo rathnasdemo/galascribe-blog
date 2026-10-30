@@ -18,6 +18,10 @@ publishAfter: '2027-01-29'
 createdAt: '2026-10-25T04:01:09.000Z'
 slug: two-days-on-one-footer
 redirects: []
+listen:
+  audio: assets/listen/two-days-on-one-footer.mp3
+  durationSeconds: 387
+  format: conversation
 extensions: {}
 ---
 

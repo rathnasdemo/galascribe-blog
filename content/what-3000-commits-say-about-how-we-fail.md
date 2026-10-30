@@ -18,6 +18,10 @@ publishAfter: '2027-04-25'
 createdAt: '2026-10-25T17:12:26.000Z'
 slug: what-3000-commits-say-about-how-we-fail
 redirects: []
+listen:
+  audio: assets/listen/what-3000-commits-say-about-how-we-fail.mp3
+  durationSeconds: 385
+  format: conversation
 extensions: {}
 ---
 

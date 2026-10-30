@@ -18,6 +18,10 @@ publishAfter: '2027-04-04'
 createdAt: '2026-10-25T17:12:57.000Z'
 slug: the-re-authentication-guard-that-lied-three-times-in-two-days
 redirects: []
+listen:
+  audio: assets/listen/the-re-authentication-guard-that-lied-three-times-in-two-days.mp3
+  durationSeconds: 407
+  format: conversation
 extensions: {}
 ---
 

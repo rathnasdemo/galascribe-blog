@@ -18,6 +18,10 @@ publishAfter: '2027-02-21'
 createdAt: '2026-10-25T17:12:57.000Z'
 slug: four-checks-that-could-not-fail
 redirects: []
+listen:
+  audio: assets/listen/four-checks-that-could-not-fail.mp3
+  durationSeconds: 351
+  format: conversation
 extensions: {}
 ---
 

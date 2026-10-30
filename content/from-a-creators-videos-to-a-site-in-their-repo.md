@@ -19,6 +19,10 @@ createdAt: '2026-10-21T03:49:38.000Z'
 publishedAt: '2026-10-30T07:20:32.063Z'
 slug: from-a-creators-videos-to-a-site-in-their-repo
 redirects: []
+listen:
+  audio: assets/listen/from-a-creators-videos-to-a-site-in-their-repo.mp3
+  durationSeconds: 406
+  format: conversation
 extensions: {}
 ---
 A creator who has published on YouTube for years has a large body of spoken work and often nothing written that they own. This post walks through what Galascribe does with that catalogue, using a demo site we built for a history channel, and says where the method runs out.

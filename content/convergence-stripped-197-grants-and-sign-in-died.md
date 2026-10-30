@@ -18,6 +18,10 @@ publishAfter: '2026-12-25'
 createdAt: '2026-10-25T17:12:26.000Z'
 slug: convergence-stripped-197-grants-and-sign-in-died
 redirects: []
+listen:
+  audio: assets/listen/convergence-stripped-197-grants-and-sign-in-died.mp3
+  durationSeconds: 378
+  format: conversation
 extensions: {}
 ---
 

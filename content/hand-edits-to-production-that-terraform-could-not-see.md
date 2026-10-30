@@ -18,6 +18,10 @@ publishAfter: '2027-04-11'
 createdAt: '2026-10-25T17:12:26.000Z'
 slug: hand-edits-to-production-that-terraform-could-not-see
 redirects: []
+listen:
+  audio: assets/listen/hand-edits-to-production-that-terraform-could-not-see.mp3
+  durationSeconds: 380
+  format: conversation
 extensions: {}
 ---
 

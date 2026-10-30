@@ -18,6 +18,10 @@ publishAfter: '2026-11-20'
 createdAt: '2026-10-21T04:12:17.000Z'
 slug: seo-you-do-not-have-to-think-about
 redirects: []
+listen:
+  audio: assets/listen/seo-you-do-not-have-to-think-about.mp3
+  durationSeconds: 408
+  format: conversation
 extensions: {}
 ---
 Search and social presentation is a handful of small facts in a page's head: which address is the canonical one, how the page is described, which picture appears when someone shares a link. Each is easy to get slightly wrong, and a template that gets one wrong gets it wrong on every site it builds. So we audited a live test site of our own. Here is what that audit found, what we changed, and what testing the changes found in turn.

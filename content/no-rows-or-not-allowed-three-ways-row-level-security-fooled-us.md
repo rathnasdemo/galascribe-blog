@@ -18,6 +18,10 @@ publishAfter: '2027-02-05'
 createdAt: '2026-10-25T17:12:26.000Z'
 slug: no-rows-or-not-allowed-three-ways-row-level-security-fooled-us
 redirects: []
+listen:
+  audio: assets/listen/no-rows-or-not-allowed-three-ways-row-level-security-fooled-us.mp3
+  durationSeconds: 425
+  format: conversation
 extensions: {}
 ---
 

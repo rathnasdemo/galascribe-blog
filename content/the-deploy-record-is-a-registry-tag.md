@@ -18,6 +18,10 @@ publishAfter: '2027-01-24'
 createdAt: '2026-10-25T04:01:09.000Z'
 slug: the-deploy-record-is-a-registry-tag
 redirects: []
+listen:
+  audio: assets/listen/the-deploy-record-is-a-registry-tag.mp3
+  durationSeconds: 390
+  format: conversation
 extensions: {}
 ---
 

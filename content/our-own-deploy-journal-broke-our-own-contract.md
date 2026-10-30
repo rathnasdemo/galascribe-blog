@@ -18,6 +18,10 @@ publishAfter: '2027-02-14'
 createdAt: '2026-10-25T17:12:26.000Z'
 slug: our-own-deploy-journal-broke-our-own-contract
 redirects: []
+listen:
+  audio: assets/listen/our-own-deploy-journal-broke-our-own-contract.mp3
+  durationSeconds: 367
+  format: conversation
 extensions: {}
 ---
 

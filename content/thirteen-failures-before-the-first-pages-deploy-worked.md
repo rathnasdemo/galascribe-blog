@@ -19,6 +19,10 @@ publishAfter: '2027-01-01'
 createdAt: '2026-10-25T04:01:09.000Z'
 slug: thirteen-failures-before-the-first-pages-deploy-worked
 redirects: []
+listen:
+  audio: assets/listen/thirteen-failures-before-the-first-pages-deploy-worked.mp3
+  durationSeconds: 363
+  format: conversation
 extensions: {}
 ---
 

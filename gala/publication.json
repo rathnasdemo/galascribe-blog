@@ -19,5 +19,8 @@
       "body": "gala/theme-pages/privacy.md"
     }
   },
+  "listen": {
+    "enabled": true
+  },
   "extensions": {}
 }

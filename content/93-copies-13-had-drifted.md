@@ -18,6 +18,10 @@ publishAfter: '2027-04-16'
 createdAt: '2026-10-25T17:12:26.000Z'
 slug: 93-copies-13-had-drifted
 redirects: []
+listen:
+  audio: assets/listen/93-copies-13-had-drifted.mp3
+  durationSeconds: 364
+  format: conversation
 extensions: {}
 ---
 

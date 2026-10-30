@@ -18,6 +18,10 @@ publishAfter: '2027-02-12'
 createdAt: '2026-10-25T17:12:26.000Z'
 slug: a-green-deploy-with-every-secret-empty
 redirects: []
+listen:
+  audio: assets/listen/a-green-deploy-with-every-secret-empty.mp3
+  durationSeconds: 399
+  format: conversation
 extensions: {}
 ---
 

@@ -18,6 +18,10 @@ publishAfter: '2027-01-15'
 createdAt: '2026-10-25T04:01:09.000Z'
 slug: why-a-preview-we-send-is-public-and-says-so
 redirects: []
+listen:
+  audio: assets/listen/why-a-preview-we-send-is-public-and-says-so.mp3
+  durationSeconds: 348
+  format: conversation
 extensions: {}
 ---
 

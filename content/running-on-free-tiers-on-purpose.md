@@ -18,6 +18,10 @@ publishAfter: '2026-12-18'
 createdAt: '2026-10-25T04:01:09.000Z'
 slug: running-on-free-tiers-on-purpose
 redirects: []
+listen:
+  audio: assets/listen/running-on-free-tiers-on-purpose.mp3
+  durationSeconds: 404
+  format: conversation
 extensions: {}
 ---
 

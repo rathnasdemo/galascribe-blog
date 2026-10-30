@@ -18,6 +18,10 @@ publishAfter: '2026-11-06'
 createdAt: '2026-10-21T03:49:38.000Z'
 slug: write-preview-publish-how-a-post-becomes-a-page
 redirects: []
+listen:
+  audio: assets/listen/write-preview-publish-how-a-post-becomes-a-page.mp3
+  durationSeconds: 421
+  format: conversation
 extensions: {}
 ---
 When you press Publish, your text passes through four places: your browser, our API, your site repository on GitHub, and a workflow that runs inside that same repository. We designed each step so that it can fail without losing what you wrote, and without claiming a result it has not seen. This post follows one post through all of them.

@@ -18,6 +18,10 @@ publishAfter: '2027-01-08'
 createdAt: '2026-10-25T04:01:09.000Z'
 slug: an-article-is-an-id-not-a-slug
 redirects: []
+listen:
+  audio: assets/listen/an-article-is-an-id-not-a-slug.mp3
+  durationSeconds: 357
+  format: conversation
 extensions: {}
 ---
 

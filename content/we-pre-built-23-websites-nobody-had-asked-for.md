@@ -19,6 +19,10 @@ createdAt: '2026-10-25T06:54:32.000Z'
 publishedAt: '2026-10-25T18:10:10.000Z'
 slug: we-pre-built-23-websites-nobody-had-asked-for
 redirects: []
+listen:
+  audio: assets/listen/we-pre-built-23-websites-nobody-had-asked-for.mp3
+  durationSeconds: 406
+  format: conversation
 extensions: {}
 ---
 

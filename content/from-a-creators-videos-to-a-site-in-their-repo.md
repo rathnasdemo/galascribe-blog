@@ -4,7 +4,8 @@ schemaVersion: 2.0.0
 id: 01a15c94-307e-79f3-adb5-26cc1f632a8b
 kind: article
 title: From a creator's videos to a site in their repo
-description: How a YouTube catalogue becomes drafted articles from the creator's own transcripts, a labelled preview site, and a claim that moves it into their GitHub.
+description: How a YouTube catalogue becomes drafted articles from the creator's own
+  transcripts, a labelled preview site, and a claim that moves it into their GitHub.
 language: en
 authors:
 - 01a15c65-9a71-782f-b76c-d0f002d9c6e5
@@ -13,9 +14,9 @@ tags:
 - transcripts
 - handover
 - github
-status: draft
-publishAfter: '2026-10-30'
+status: published
 createdAt: '2026-10-21T03:49:38.000Z'
+publishedAt: '2026-10-30T07:20:32.063Z'
 slug: from-a-creators-videos-to-a-site-in-their-repo
 redirects: []
 extensions: {}

@@ -19,8 +19,8 @@
   },
   "template": {
     "package": "@rathnasgala2/template",
-    "version": "4.8.0",
-    "integrity": "sha256:3eced3aeb79056f07d22d8d925392d60679fe60a6c03b4bb552a76986ad963bb",
+    "version": "4.9.0",
+    "integrity": "sha256:1c2563f12e9cc657af13a831d6acb65f39f07cb3728760af4bc791420c2ad664",
     "registry": "https://registry.npmjs.org/",
     "contractVersion": "4.1.0",
     "compatibleWith": "^4.0.0",
@@ -28,8 +28,8 @@
   },
   "theme": {
     "package": "@rathnasgala2/theme-amaze",
-    "version": "4.2.0",
-    "integrity": "sha256:bc6fe22c621645b4b5c750bc810f837e1a12af0a0f17344cdce00a79bf1a6dc5",
+    "version": "4.2.1",
+    "integrity": "sha256:cad8096c6b1fd0716185bea9179be03c2d7443de1612c63256e531f4632a4e24",
     "registry": "https://registry.npmjs.org/",
     "contractVersion": "4.1.0",
     "compatibleWith": "^4.0.0"
@@ -70,5 +70,5 @@
   ],
   "dependencies": [],
   "dependencyDag": [],
-  "lockDigest": "sha256:8bc0d93752d8bbb3ff43d4e9c4168209b630af09a5f161d6cdcd224584b0cf59"
+  "lockDigest": "sha256:7d84dfab301bc741ef08b7bbc773e3e9ce97b570549378dba96c2398a87de15b"
 }

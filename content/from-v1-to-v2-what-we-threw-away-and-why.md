@@ -4,7 +4,8 @@ schemaVersion: 2.0.0
 id: 01a15c94-3080-7600-97fc-d710bd11ccbb
 kind: article
 title: 'From v1 to v2: what we threw away and why'
-description: We deleted our first v2 interface instead of keeping it beside the rebuilt one. What went, what stayed underneath, and which seams still show.
+description: We deleted our first v2 interface instead of keeping it beside the rebuilt
+  one. What went, what stayed underneath, and which seams still show.
 language: en
 authors:
 - 01a15c65-9a71-782f-b76c-d0f002d9c6e5
@@ -13,9 +14,9 @@ tags:
 - redesign
 - migration
 - ux
-status: draft
-publishAfter: '2026-11-01'
+status: published
 createdAt: '2026-10-21T03:49:38.000Z'
+publishedAt: '2026-11-01T07:12:52.685Z'
 slug: from-v1-to-v2-what-we-threw-away-and-why
 redirects: []
 listen:

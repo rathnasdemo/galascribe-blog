@@ -19,6 +19,13 @@
       "body": "gala/theme-pages/privacy.md"
     }
   },
+  "newsletter": {
+    "mode": "galascribe",
+    "title": "Get new posts by email",
+    "text": "Join the newsletter and every new post lands in your inbox.",
+    "emailContent": "full",
+    "replyToOwner": false
+  },
   "listen": {
     "enabled": true
   },

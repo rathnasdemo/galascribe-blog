@@ -4,7 +4,8 @@ schemaVersion: 2.0.0
 id: 01a15c94-3082-7fdd-81ea-7b2adc269b58
 kind: article
 title: 'Write, preview, publish: how a post becomes a page'
-description: 'Follow one post from a draft branch in your repository to a live page: how the preview is drawn, what publish does, and how we check it is served.'
+description: 'Follow one post from a draft branch in your repository to a live page:
+  how the preview is drawn, what publish does, and how we check it is served.'
 language: en
 authors:
 - 01a15c65-9a71-782f-b76c-d0f002d9c6e5
@@ -13,9 +14,9 @@ tags:
 - publishing
 - github
 - preview
-status: draft
-publishAfter: '2026-11-06'
+status: published
 createdAt: '2026-10-21T03:49:38.000Z'
+publishedAt: '2026-11-06T08:03:55.888Z'
 slug: write-preview-publish-how-a-post-becomes-a-page
 redirects: []
 listen:

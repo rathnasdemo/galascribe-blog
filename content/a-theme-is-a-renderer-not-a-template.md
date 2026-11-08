@@ -4,7 +4,8 @@ schemaVersion: 2.0.0
 id: 01a15ca8-eea2-7668-a436-b719d668ac8c
 kind: article
 title: 'A theme is not a template: it supplies values, not layout'
-description: How a Galascribe site splits into a renderer that owns layout, themes that supply typed values, and a lock file that decides which of them a build uses.
+description: How a Galascribe site splits into a renderer that owns layout, themes
+  that supply typed values, and a lock file that decides which of them a build uses.
 language: en
 authors:
 - 01a15c65-9a71-782f-b76c-d0f002d9c6e5
@@ -13,9 +14,9 @@ tags:
 - template
 - toolchain
 - lockfile
-status: draft
-publishAfter: '2026-11-08'
+status: published
 createdAt: '2026-10-21T04:12:17.000Z'
+publishedAt: '2026-11-08T08:04:36.702Z'
 slug: a-theme-is-a-renderer-not-a-template
 redirects: []
 listen:

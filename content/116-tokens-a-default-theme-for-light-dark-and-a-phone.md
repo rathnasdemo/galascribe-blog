@@ -4,7 +4,8 @@ schemaVersion: 2.0.0
 id: 01a15ca8-eea0-73cc-a075-ad82769105ef
 kind: article
 title: '116 tokens: a default theme for light, dark and a phone'
-description: How the default theme became 116 typed design tokens with light and dark values, and how a creator's own colours are checked for contrast before a build.
+description: How the default theme became 116 typed design tokens with light and dark
+  values, and how a creator's own colours are checked for contrast before a build.
 language: en
 authors:
 - 01a15c65-9a71-782f-b76c-d0f002d9c6e5
@@ -13,9 +14,9 @@ tags:
 - tokens
 - contrast
 - darkmode
-status: draft
-publishAfter: '2026-11-13'
+status: published
 createdAt: '2026-10-21T04:12:17.000Z'
+publishedAt: '2026-11-13T08:05:57.963Z'
 slug: 116-tokens-a-default-theme-for-light-dark-and-a-phone
 redirects: []
 listen:

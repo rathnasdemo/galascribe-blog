@@ -4,7 +4,8 @@ schemaVersion: 2.0.0
 id: 01a15ca8-eea7-7783-a74c-f7fb82750acd
 kind: article
 title: Likes and comments on a static site
-description: A site of plain files cannot count likes or know who is commenting. How built pages call the platform API for both, and what that costs us.
+description: A site of plain files cannot count likes or know who is commenting. How
+  built pages call the platform API for both, and what that costs us.
 language: en
 authors:
 - 01a15c65-9a71-782f-b76c-d0f002d9c6e5
@@ -13,9 +14,9 @@ tags:
 - comments
 - security
 - moderation
-status: draft
-publishAfter: '2026-11-15'
+status: published
 createdAt: '2026-10-21T04:12:17.000Z'
+publishedAt: '2026-11-15T08:16:20.827Z'
 slug: likes-and-comments-on-a-static-site
 redirects: []
 listen:

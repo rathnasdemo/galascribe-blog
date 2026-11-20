@@ -4,7 +4,8 @@ schemaVersion: 2.0.0
 id: 01a15ca8-eea9-7c23-ab5c-d8b6e5c2421f
 kind: article
 title: SEO you do not have to think about
-description: 'One address per page, descriptions you write, a picture for shared links: what we found auditing our own test site, and what we changed.'
+description: 'One address per page, descriptions you write, a picture for shared links:
+  what we found auditing our own test site, and what we changed.'
 language: en
 authors:
 - 01a15c65-9a71-782f-b76c-d0f002d9c6e5
@@ -13,9 +14,9 @@ tags:
 - search
 - metadata
 - authoring
-status: draft
-publishAfter: '2026-11-20'
+status: published
 createdAt: '2026-10-21T04:12:17.000Z'
+publishedAt: '2026-11-20T08:01:06.799Z'
 slug: seo-you-do-not-have-to-think-about
 redirects: []
 listen:

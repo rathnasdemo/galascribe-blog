@@ -4,7 +4,8 @@ schemaVersion: 2.0.0
 id: 01a17138-2dd7-71f5-b3e4-d6278a50ca5a
 kind: article
 title: Where we differ from Ghost, Substack and WordPress
-description: What Ghost, Substack and WordPress do better than Galascribe as of 2026-10, and the one structural difference we chose on purpose.
+description: What Ghost, Substack and WordPress do better than Galascribe as of 2026-10,
+  and the one structural difference we chose on purpose.
 language: en
 authors:
 - 01a15c65-9a71-782f-b76c-d0f002d9c6e5
@@ -13,9 +14,9 @@ tags:
 - ownership
 - markdown
 - hosting
-status: draft
-publishAfter: '2026-11-22'
+status: published
 createdAt: '2026-10-25T04:01:09.000Z'
+publishedAt: '2026-11-22T09:51:55.916Z'
 slug: where-we-differ-from-ghost-substack-and-wordpress
 redirects: []
 listen:

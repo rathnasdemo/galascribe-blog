@@ -11,9 +11,10 @@ tags: []
 status: unlisted
 createdAt: '2026-11-23T23:33:25.569Z'
 publishedAt: '2026-11-23T23:33:45.743Z'
+updatedAt: '2026-11-23T23:40:21.711Z'
 slug: qa-open-items-check
 redirects: []
 newsletter: ineligible
 extensions: {}
 ---
-First version of the check.
+Second version of the check.

@@ -17,6 +17,6 @@ redirects: []
 newsletter: ineligible
 extensions: {}
 ---
-Third version, typed in the editor.
+Third version, rewritten on another device.
 
 A line added from another device.

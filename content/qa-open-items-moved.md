@@ -11,9 +11,10 @@ tags: []
 status: unlisted
 createdAt: '2026-11-23T23:33:25.569Z'
 publishedAt: '2026-11-23T23:33:45.743Z'
-updatedAt: '2026-11-23T23:50:59.820Z'
-slug: qa-open-items-check
-redirects: []
+updatedAt: '2026-11-23T23:58:34.195Z'
+slug: qa-open-items-moved
+redirects:
+  - /qa-open-items-check
 newsletter: ineligible
 extensions: {}
 ---

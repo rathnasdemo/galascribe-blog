@@ -11,9 +11,10 @@ tags: []
 status: unlisted
 createdAt: '2026-11-23T09:16:15.612Z'
 publishedAt: '2026-11-23T09:16:34.888Z'
+updatedAt: '2026-11-23T17:49:56.042Z'
 slug: qa-address-check
 redirects: []
 newsletter: ineligible
 extensions: {}
 ---
-Second version of the body, edited from the new-post address. This test post will be removed.
+Third version of the body, edited after the fix. This test post will be removed.

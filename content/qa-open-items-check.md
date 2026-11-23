@@ -18,3 +18,5 @@ newsletter: ineligible
 extensions: {}
 ---
 Second version of the check.
+
+A line added from another device.

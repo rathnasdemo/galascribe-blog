@@ -16,4 +16,4 @@ redirects: []
 newsletter: ineligible
 extensions: {}
 ---
-First version of the body. This test post will be removed.
+Second version of the body, edited from the new-post address. This test post will be removed.

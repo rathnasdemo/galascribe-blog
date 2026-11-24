@@ -11,8 +11,10 @@ tags: []
 status: unlisted
 createdAt: '2026-11-24T03:07:47.490Z'
 publishedAt: '2026-11-24T03:08:07.076Z'
-slug: qa-sheet-check
-redirects: []
+updatedAt: '2026-11-24T03:14:20.555Z'
+slug: qa-sheet-moved
+redirects:
+  - /qa-sheet-check
 extensions: {}
 ---
 Body of the sheet check.

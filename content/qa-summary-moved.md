@@ -11,8 +11,10 @@ tags: []
 status: unlisted
 createdAt: '2026-11-24T05:55:18.984Z'
 publishedAt: '2026-11-24T05:55:58.404Z'
-slug: qa-summary-check
-redirects: []
+updatedAt: '2026-11-24T06:02:02.366Z'
+slug: qa-summary-moved
+redirects:
+  - /qa-summary-check
 summary: This post checks that a summary and two questions reach the page.
 faq:
   - question: Does the summary show at the top?

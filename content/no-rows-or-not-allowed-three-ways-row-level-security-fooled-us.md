@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2027-02-05'
 createdAt: '2026-10-25T17:12:26.000Z'
+summary: 'With forced row-level security, a query outside a tenant transaction returns zero rows, so "no such row" and "you may not see it" look identical. Three bugs in 2026, in a confirm path, a dispatch path and a migration, came from code that treated an empty result as an answer. Our rule now: a branch that runs on zero rows is a bug until a test proves otherwise.'
+faq:
+- question: 'Why does forced row-level security return no rows instead of an error?'
+  answer: 'With FORCE ROW LEVEL SECURITY, a query only sees rows if the connection has first been told which organisation it acts for. Outside a tenant transaction the query does not fail. It returns zero rows with no warning, so a missing row and a hidden row give the same result.'
+- question: 'How did an empty query result break Galascribe''s confirm path?'
+  answer: 'The confirm step looked up the kind of change outside a tenant transaction, so row-level security returned nothing. The code fell back to treating it as a managed-binding change, a check a content change was never planned against, so every content change was refused with INVALID_SOURCE_STATE. The fix scoped that lookup in a tenant transaction.'
+- question: 'Why did a database migration fail on forced row-level security tables?'
+  answer: 'On 2026-10-05 a migration backfilled a merged_at column on a forced-RLS table. A migration has no tenant context, so the UPDATE matched no row and the CHECK constraint added right after failed on every merged pull request in production. The fix lifts the flag around the UPDATE and restores it in the same transaction.'
+- question: 'How should I test code that reads tables with row-level security?'
+  answer: 'Run the test against a real Postgres as the role production uses, not a superuser. Seed rows the code must find and rows it must not, in more than one organisation. For a data migration, seed the table as production has it, apply the forward SQL as the owner and assert on the result, and watch the test fail against the old code first.'
+- question: 'What should I search for in my own code?'
+  answer: 'Search for every isEmpty check or orElse that follows a query on a table with row-level security. For each one, ask whether the empty case can mean you may not see it. If it can, make the empty case an error that names that possibility, or set the tenant context before the query runs.'
 slug: no-rows-or-not-allowed-three-ways-row-level-security-fooled-us
 redirects: []
 listen:

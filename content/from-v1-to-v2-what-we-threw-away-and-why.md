@@ -17,6 +17,19 @@ tags:
 status: published
 createdAt: '2026-10-21T03:49:38.000Z'
 publishedAt: '2026-11-01T07:12:52.685Z'
+summary: 'In Galascribe v2 a site is a set of files in a repository you own, built and published to GitHub Pages, where v1 published from a headless API. We built one v2 interface, rebuilt it around what a writer does, ran the two side by side and deleted the first outright on 2026-10-18. Old addresses get permanent redirects, and the post lists the leftovers we have not cleaned up yet.'
+faq:
+- question: 'What is the difference between Galascribe v1 and v2?'
+  answer: 'v1 had a public API that took a key in an X-Gala-API-Key header and offered read-only published scopes, and its sites were published from a headless API. In v2 a site is a set of files in a repository you own, built and published to GitHub Pages.'
+- question: 'What happened to the first Galascribe v2 interface?'
+  answer: 'It was deleted outright on 2026-10-18. One interface remains at the root of the app, with permanent redirects for the addresses the old one used to answer and a real 404 for everything else.'
+- question: 'Does Galascribe store my content?'
+  answer: 'No. Your content stays in your site repository. The API stores paths, blob ids, sizes and digests, not what you wrote.'
+- question: 'What does live mean in Galascribe?'
+  answer: 'Only a deployment that reached the verified state, with verification evidence attached, may be called live. An earlier version inferred live from the existence of a publish id, so a failed workflow could be reported as live.'
+- question: 'Which publishing destinations does Galascribe offer?'
+  answer: 'GitHub Pages is the only destination offered. The contract still describes DigitalOcean Spaces and a local directory, but no screen edits a destination.'
+updatedAt: '2026-11-25T18:00:00.000Z'
 slug: from-v1-to-v2-what-we-threw-away-and-why
 redirects: []
 listen:

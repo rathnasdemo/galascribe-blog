@@ -16,6 +16,16 @@ tags:
 status: draft
 publishAfter: '2027-03-19'
 createdAt: '2026-10-25T17:12:26.000Z'
+summary: 'A site handover retried silently for two hours and failed with PUBLISH_FAILED because the driver logged only the exception class and our log redactor blanks the value after any code= or state= key. We fixed it on 2026-10-18 by renaming the log fields to failureCode= and handoverState=. A second redactor, in the publish toolchain, silently dropped credentials under a __proto__ key.'
+faq:
+- question: 'Why did a Galascribe handover fail with PUBLISH_FAILED and no reason in the log?'
+  answer: 'The batch judge refused each finalize change as REVIEW_REQUIRED, because it did not know a handover''s changes are system changes. The driver logged only the exception class, and the log redactor would have blanked the code even if it had been logged.'
+- question: 'What did the log redactor do to the failure reason?'
+  answer: 'It blanks the value after any code= or state= key, so a line saying code=REVIEW_REQUIRED would have reached us as code= and a blank. The driver''s log fields were renamed to failureCode= and handoverState=, which the redactor does not match.'
+- question: 'What was the redactSecrets bug in the publish toolchain?'
+  answer: 'On 2026-09-25 a security review found that it cloned untrusted JSON with bracket assignment. A genuine own key named __proto__ went through the prototype setter, so the credential subtree under it dropped out of the clone and the clone''s prototype became attacker-controlled.'
+- question: 'How should I test a log redactor?'
+  answer: 'Cause a refusal, run the real log pipeline, and assert that the reason is in the output. Add a hostile input to the redactor itself and assert the output keeps everything except the secret. Choose field names that the redactor does not treat as sensitive.'
 slug: the-redactor-ate-the-evidence
 redirects: []
 listen:

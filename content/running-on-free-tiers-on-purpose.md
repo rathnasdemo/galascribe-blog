@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2026-12-18'
 createdAt: '2026-10-25T04:01:09.000Z'
+summary: 'Galascribe serves every creator site from GitHub Pages and the App from Cloudflare Pages, so readers never touch our servers or bill. Paid compute is one DigitalOcean Droplet, a managed PostgreSQL database, storage and a registry, planned at about $49 a month on 2026-09-09. The free tiers cost us too: GitHub Actions minutes ran out, so we deploy from a workstation.'
+faq:
+- question: 'How does Galascribe keep reader costs at zero?'
+  answer: 'Every creator''s site is served by GitHub Pages from a repository the creator owns. We do not serve their HTML, so page views, bandwidth and caching never reach our servers or our bill. The build runs as a workflow in the creator''s own repository, under their GitHub account.'
+- question: 'What does Galascribe pay for?'
+  answer: 'One DigitalOcean Droplet runs the API, with the background worker in the same process since 2026-09-30. There is one single-node managed PostgreSQL database, object storage for backups and exports, a container registry and Google Workspace for mail. The 2026-09-09 estimate was about $49 a month, a planning figure and not an invoice.'
+- question: 'What happens to published Galascribe sites if the API is down?'
+  answer: 'Every published page still loads, because the decision record requires that published author sites stay readable when the control plane is down. The exception is likes and comments, which need our API. The article loads as before and its reaction section says responses are unavailable.'
+- question: 'Why did Galascribe stop using GitHub Actions for private repositories?'
+  answer: 'One push to the API repository cost 15 to 20 minutes, and GitHub''s free plan gives an account''s private repositories 2,000 minutes a month. By 2026-09-27 GitHub declined to start jobs. We now deploy from the workstation, with guards, and push private commits with skip actions.'
+- question: 'What are the limits of GitHub Pages for creators?'
+  answer: 'As read on 2026-10-24, GitHub documents a published site of no more than 1 GB, a soft bandwidth limit of 100 GB a month and a 10-minute deployment timeout. On GitHub Free the repository must be public. We measured a cache max-age of 600 seconds, so we poll for about eleven minutes to verify a publish.'
 slug: running-on-free-tiers-on-purpose
 redirects: []
 listen:

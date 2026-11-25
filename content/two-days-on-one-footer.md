@@ -16,6 +16,16 @@ tags:
 status: draft
 publishAfter: '2027-01-29'
 createdAt: '2026-10-25T04:01:09.000Z'
+summary: 'The legal footer was on npm the day after we wrote it, but on 2026-10-22 our own blog still did not show it. Nothing moved a site to the new template generation, our API and App disagreed about theme catalog values, and no button published the repository''s head. We fixed it by making Update now publish and adding a self-healing worker. Done means a live site renders it.'
+faq:
+- question: 'Why did the Galascribe legal footer not appear on live sites after release?'
+  answer: 'Every live site was still on template 4.3.0 and the footer lives in 4.4.0. Set up repository rewrote the caller workflow but not the lock file that names the template version, and a background generation sweep reverted the change 49 seconds later.'
+- question: 'How does a Galascribe site move to a new template generation?'
+  answer: 'When a person presses Update now. It moves the lock and the caller in a single commit and publishes the site in the same click. There is no background generation move for existing sites.'
+- question: 'What does the Galascribe self-healing republish worker do?'
+  answer: 'It republishes a live site whose repository head is ahead of the live build only by commits that Galascribe itself wrote, once per head. Proof is a ledger of commit SHAs we created, not authorship, because authorship is spoofable.'
+- question: 'When is a Galascribe feature finished?'
+  answer: 'When a real live site renders it after the exact button sequence a person uses. Before calling a rollout path Set up then Publish, run it on one production site, read the commit it produced, then fetch the built page and look for the thing.'
 slug: two-days-on-one-footer
 redirects: []
 listen:

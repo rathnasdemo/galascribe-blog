@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2027-01-17'
 createdAt: '2026-10-25T04:01:09.000Z'
+summary: 'Our review of every repository, finished on 2026-09-25, counted 364 findings, or 260 distinct ones once the five near-identical theme packages are counted once. The findings fell into six patterns, including gates that could not fail, set-but-empty settings and documentation that claimed more than the code did. Each pattern is a search you can run on your own code.'
+faq:
+- question: 'How many findings did Galascribe''s 2026-09-25 code review produce?'
+  answer: 'The summary table adds up to 364: 22 critical, 108 high, 148 medium and 86 low. Counting the findings shared across the five theme packages once gives 260 distinct findings.'
+- question: 'What patterns did Galascribe''s code review find?'
+  answer: 'Six: gates that look like safety nets and are not, two sides of an interface configured separately, set-but-empty versus absent values, origin authenticity at the edge, decorative artifacts, and documentation as a live hazard.'
+- question: 'Why can an empty environment variable stop a Spring application from starting?'
+  answer: 'A Spring default written as ${VAR:default} applies only when the variable is absent, never when it is present and empty. In our API, one empty polling interval stopped the process from booting.'
+- question: 'What should I search for in my own code after a review like this?'
+  answer: 'Six things: skip in your CI configuration, a recent fix you can revert to see a test turn red, every ${NAME:default} where an empty value is possible, every allowlist described as authentication, what you publish versus what your exports reference, and one README claim and the line that enforces it.'
+- question: 'Were the findings from the Galascribe review fixed?'
+  answer: 'Remediation ran as one branch per repository, and all eleven closed on 2026-09-26. Some items were deferred behind written plans.'
 slug: 364-findings-from-reviewing-our-own-code
 redirects: []
 listen:

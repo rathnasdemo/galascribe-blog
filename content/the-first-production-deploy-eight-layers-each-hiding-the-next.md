@@ -16,6 +16,16 @@ tags:
 status: draft
 publishAfter: '2027-02-07'
 createdAt: '2026-10-25T17:12:57.000Z'
+summary: 'Galascribe''s deploy path had only run against fakes, so its first real production deploys, from 2026-09-22 to 2026-09-25, uncovered eight defects one at a time. Each hid the next, and three failed deploys on 2026-09-24 each cost a server and a CI run. A disposable, production-shaped droplet that runs every deploy verb as SSH would stopped the cycle.'
+faq:
+- question: 'Why did Galascribe''s first production deploy hit eight defects in a row?'
+  answer: 'The deploy path''s container-based tests passed every time because they faked sudo, Podman, runuser and systemctl and ran from an interactive root shell. Every bug lived in the gap between that and the real host, and each stayed invisible until the one above it was fixed.'
+- question: 'What was the sshd masking bug?'
+  answer: 'The boot script masks the SSH service until hardening is in place. cloud-init wrote files with a group owner that did not exist yet, the write step aborted, extraction failed and the script stopped before unmasking. The fix arms an EXIT trap before the first command that can fail, so a broken boot leaves a host a person can log into.'
+- question: 'What is a disposable production-shaped test harness?'
+  answer: 'A harness that renders the real boot configuration, boots a real throwaway server and calls each deploy verb the way SSH does, as the restricted deploy user with the verb as the forced command. It pulls the real image and migrates a real throwaway database. Teardown verifies with the provider''s CLI that everything is gone.'
+- question: 'How can I avoid deploy surprises on the first real run?'
+  answer: 'Before the first real deploy of anything, boot a disposable copy of the real target and run every verb on it, from the identity and shell it will really use. Your first real deploy is a test suite whether you planned one or not.'
 slug: the-first-production-deploy-eight-layers-each-hiding-the-next
 redirects: []
 listen:

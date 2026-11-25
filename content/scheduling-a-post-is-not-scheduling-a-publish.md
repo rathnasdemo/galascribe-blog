@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2027-01-22'
 createdAt: '2026-10-25T04:01:09.000Z'
+summary: 'The Schedule button schedules one deploy at one instant, with one pending schedule per site, so it cannot run a blog calendar. Galascribe added Staggered release instead: a draft carries a publishAfter date and a sweep every ten minutes publishes due drafts in the site''s time zone. It has no time of day and needs our API to be running.'
+faq:
+- question: 'Why can''t the Galascribe Schedule button run a blog calendar?'
+  answer: 'It schedules a publish: one deploy at one instant, and a site can have one schedule pending at a time. API keys have no scope to schedule, the editor''s publishedAt keeps the save date, and editing a scheduled post cancels the schedule.'
+- question: 'What is Staggered release on Galascribe?'
+  answer: 'A setting in the site''s Settings, off by default, that releases scheduled drafts on their dates. A draft carries a publishAfter date in its front matter, written as YYYY-MM-DD, and the site''s time zone is chosen from the browser''s IANA list. The Posts page marks such drafts as Scheduled.'
+- question: 'How does a staggered release publish a post?'
+  answer: 'A sweep in the API''s worker runs every ten minutes. For each site with the setting on, it takes dated drafts whose date is today or earlier in the site''s time zone, sets status to published, sets publishedAt to the release moment and removes publishAfter, in one commit and one publish.'
+- question: 'Can I set a time of day for a staggered release?'
+  answer: 'No. The release has day precision only, so a post dated a Sunday goes out within about ten minutes of midnight at the start of that Sunday in the site''s zone. If you need one change at an exact minute, the Schedule button still does that, one at a time.'
+- question: 'Does Staggered release hide the draft until its date?'
+  answer: 'No. A dated draft is a file in your repository. If the repository is public, as it must be for Pages on a free GitHub account, anyone can read the post before its day. If the site requires review, the sweep writes nothing and shows the post as waiting for review.'
 slug: scheduling-a-post-is-not-scheduling-a-publish
 redirects: []
 listen:

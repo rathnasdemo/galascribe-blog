@@ -16,6 +16,16 @@ tags:
 status: draft
 publishAfter: '2026-12-25'
 createdAt: '2026-10-25T17:12:26.000Z'
+summary: 'On 2026-09-25 every GitHub sign-in on production failed with ''permission denied for table''. Our deploy revokes the runtime roles'' privileges and re-grants only what a manifest lists, and the manifest declared 40 table authorities while the API''s changelog executes 357 privileges. Deriving the manifest from the changelog fixed it, and a test now fails when the two disagree.'
+faq:
+- question: 'Why did GitHub sign-in fail with ''permission denied for table''?'
+  answer: 'The deploy revoked the API runtime role''s privileges and re-granted only the manifest''s 40 table authorities, while the changelog executes 357. The role lost SELECT, INSERT and UPDATE on the table that stores sign-in credentials.'
+- question: 'How did Galascribe fix the missing database grants?'
+  answer: 'A script now replays every GRANT and REVOKE the changelog executes, in the order the migration tool applies them, and the manifest is its output. A test diffs the manifest against a fresh derivation and fails when they disagree.'
+- question: 'Why did local tests not catch the missing grants?'
+  answer: 'A superuser bypasses ownership checks, so the local harness never saw a silent no-op or a missing schema privilege. The post recommends running convergence and its checks as the least privileged identity production uses.'
+- question: 'What should I check if I reset privileges and re-grant from a list?'
+  answer: 'Count both sides of the list, generate the list from the source of truth, and run the convergence and its follow-up check as the least privileged identity your production database uses.'
 slug: convergence-stripped-197-grants-and-sign-in-died
 redirects: []
 listen:

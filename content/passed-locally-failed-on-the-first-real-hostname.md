@@ -16,6 +16,16 @@ tags:
 status: draft
 publishAfter: '2027-02-28'
 createdAt: '2026-10-25T17:12:57.000Z'
+summary: 'Three sign-in blockers appeared on the first real deployment of the Galascribe App that no local run could show. A host-only anti-forgery cookie could not be read across hostnames, the build embedded the local environment binding, and a content security policy written from source blank-screened the App. Each check ran where the failure could not happen.'
+faq:
+- question: 'Why did Continue with GitHub do nothing on the first production deploy?'
+  answer: 'The API sets its XSRF-TOKEN cookie as host-only on its own hostname, and the App on another hostname could not read it. The sign-in function threw before the client sent any request, which is why the network panel showed nothing. Local runs used one hostname, so they passed.'
+- question: 'How did Galascribe fix the cross-hostname cookie problem?'
+  answer: 'We left both cookies'' attributes alone. The Cloudflare Pages worker for the App now reverse-proxies the API''s versioned surface onto the App''s own origin, so the cookie is same-origin and readable. A proxy changes where the request goes, not what either cookie permits.'
+- question: 'Why should a build fail closed when the environment is not set?'
+  answer: 'We had compiled the local binding into every build, so a real deployment would have failed every served file with ENVIRONMENT_MISMATCH and stayed degraded. The expected binding is now chosen by a build-time environment value, and a missing or unrecognised value fails closed instead of defaulting to local.'
+- question: 'Why test a content security policy in a real browser?'
+  answer: 'A policy written from your source describes your source. A live browser check found two more violations: one needed unsafe-eval because a schema library compiles its validator at run time, and the other was Cloudflare''s zone-level Web Analytics beacon, which is not in the repository. One of them blank-screened the App.'
 slug: passed-locally-failed-on-the-first-real-hostname
 redirects: []
 listen:

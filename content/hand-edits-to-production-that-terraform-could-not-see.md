@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2027-04-11'
 createdAt: '2026-10-25T17:12:26.000Z'
+summary: 'By 2026-09-25 production held things our OpenTofu state did not know about: a container registry, a reserved IP and six DNS records made by hand, which Cloudflare refused as duplicates. We adopted each into state with import blocks, put a step that needs a human decision behind a manifest flag that defaults to off, and taught the deploy canary to recognize an edge-blocked runner.'
+faq:
+- question: 'What happens when a resource exists but is not in Terraform or OpenTofu state?'
+  answer: 'The tool tries to create it, and the provider either refuses or makes a duplicate. In our case Cloudflare refused all six DNS records as duplicates.'
+- question: 'How did Galascribe adopt existing resources into its OpenTofu state?'
+  answer: 'With import blocks, gated so they fire only for production in live activation mode. For DNS, a module reads the live zone through a data source and matches by hostname and record type, because the import id is a hash that Cloudflare assigns.'
+- question: 'How can I stop a routine apply from running something that needs a human decision?'
+  answer: 'Make the decision a switch in the data, not a comment in the code. Ours is a manifest flag that defaults to off, with production and recovery carrying an explicit false.'
+- question: 'Why did the Galascribe deploy canary fail good deployments?'
+  answer: 'Cloudflare''s bot protection, on the Free plan where the setting cannot be exempted, blocks GitHub-hosted runners. The canary now logs each failed attempt and treats an edge-blocked runner as a warning when every attempt was an edge block, since the host''s own gate has already confirmed the promotion.'
+- question: 'How do I find hand edits to my production infrastructure?'
+  answer: 'List the resources in the provider''s console against the resources in state. For each difference, decide whether to adopt, delete or document it, and write the decision in a commit.'
 slug: hand-edits-to-production-that-terraform-could-not-see
 redirects: []
 listen:

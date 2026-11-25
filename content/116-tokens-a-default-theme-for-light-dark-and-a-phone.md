@@ -17,6 +17,17 @@ tags:
 status: published
 createdAt: '2026-10-21T04:12:17.000Z'
 publishedAt: '2026-11-13T08:05:57.963Z'
+summary: 'The default theme is now a closed list of 116 typed design tokens, each with a light and a dark value, instead of a skin over a fixed page. A creator can pick three colours, Accent, Background and Text, and the build checks contrast before a page is served. One preset, Graphite, still misses our 4.5:1 aim for muted meta text in two themes.'
+faq:
+- question: 'How many design tokens does the Galascribe default theme have?'
+  answer: '116 typed tokens, replacing a list of 35. Each has a light and a dark value, and 57 of them may differ between the two modes while the other 59 must be byte-equal.'
+- question: 'Can I choose my own colours for a Galascribe site?'
+  answer: 'Yes. There are three roles, Accent, Background and Text, each an explicit light and dark pair. A role left unpicked uses the theme''s own value.'
+- question: 'How does Galascribe stop custom colours from making a page unreadable?'
+  answer: 'Text must reach 4.5:1 against Background in each mode, and Background must be light enough in light mode and dark enough in dark mode. If a pick fails, Save is disabled and the reason is shown, and the template refuses the build with APPEARANCE_PALETTE_CONTRAST.'
+- question: 'Does a Galascribe site work with JavaScript turned off?'
+  answer: 'Yes. Every page must read completely with JavaScript off. The site script only enhances: search, copy buttons, the menu and the colour-mode toggle.'
+updatedAt: '2026-11-25T18:00:00.000Z'
 slug: 116-tokens-a-default-theme-for-light-dark-and-a-phone
 redirects: []
 listen:

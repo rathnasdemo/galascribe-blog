@@ -16,6 +16,16 @@ tags:
 status: draft
 publishAfter: '2027-04-23'
 createdAt: '2026-10-25T17:12:26.000Z'
+summary: 'When a browser restores a page from its back/forward cache, the page keeps its old state, so a disabled Connect GitHub button stays greyed out and working forever. We fixed it on 2026-10-13 with a small React hook that resets state on pageshow when persisted is true, and applied it wherever a page sends people to a third party. The tests send a synthetic event, and none drives a real back-forward cache.'
+faq:
+- question: 'Why does a button stay disabled after I press the browser''s Back button?'
+  answer: 'Browsers keep a page you leave in a back/forward cache and restore it exactly as it was, including JavaScript state and the DOM. A page that disabled a button before you left comes back with it still disabled.'
+- question: 'How do I detect a page restored from the back/forward cache?'
+  answer: 'Listen for pageshow on the window and check that the event''s persisted flag is true. It is the only signal browsers give for that case, and a normal load never fires it.'
+- question: 'What should a restore handler do?'
+  answer: 'Re-read the truth instead of assuming the world is as the person left it. Our Connect GitHub step goes back to idle and checks again for GitHub installations, and every re-check shows a visible working state.'
+- question: 'How should I test a page that hands the user to a third party?'
+  answer: 'Test both ways back: by the link and by the Back button. Do it by hand once: click through to the other site, press Back, and look at the page.'
 slug: back-resurrects-a-dead-button
 redirects: []
 listen:

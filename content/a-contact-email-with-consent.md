@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2026-12-13'
 createdAt: '2026-10-25T04:01:09.000Z'
+summary: 'Galascribe stores one email address per person, taken from the primary verified address on their GitHub account and sealed with encryption before it reaches the table. Operators see only whether an address is on file, and the person holds a switch on the Account page that deletes the address while keeping the refusal. The post describes what the code on our main branches did as of 2026-10-24.'
+faq:
+- question: 'Does Galascribe store my email address?'
+  answer: 'Yes, one: the primary, verified address from your GitHub account. If GitHub offers none, we store nothing, and a failure to read emails never fails a sign-in.'
+- question: 'How does Galascribe store my email address?'
+  answer: 'It is sealed with AES-GCM encryption, using a fresh data key per row that is wrapped under a master key, and the ciphertext is bound to your id. A digest of the lower-cased address lets us ask whether an address is on file without decrypting. Sealed means encrypted at rest; our API can open the address to build the masked form and to send mail.'
+- question: 'How do I remove my email address from Galascribe?'
+  answer: 'Turn off the switch ''Use my GitHub email for account and security notices'' on the Contact email card of the Account page. The ciphertext, keys and digest are set to null and only the state WITHDRAWN and its timestamps remain. Closing your account deletes the row.'
+- question: 'Can Galascribe staff see my email address?'
+  answer: 'Operators see only ''On file'' or ''None''. An operator can send one message to one person with an address on file, in the account, security or service category, and every send leaves an audit entry. There are no bulk sends and no marketing category.'
+- question: 'What happens if I turn the contact email switch back on?'
+  answer: 'The switch clears the withdrawal, but your GitHub email is stored the next time you sign in. Sign out and back in to share it now.'
 slug: a-contact-email-with-consent
 redirects: []
 listen:

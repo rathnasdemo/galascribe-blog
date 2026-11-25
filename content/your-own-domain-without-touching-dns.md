@@ -17,6 +17,18 @@ tags:
 status: draft
 publishAfter: '2026-11-27'
 createdAt: '2026-10-25T04:01:09.000Z'
+summary: 'The Domain page in Galascribe lists the DNS records GitHub Pages needs and checks every few minutes whether public DNS points at GitHub. If your DNS is on Cloudflare, one button adds the records for you as DNS only, and nothing in your way is changed without showing you a plan first. We also fixed what broke our own blog''s first custom-domain publish.'
+faq:
+- question: 'How do I connect a custom domain to my Galascribe site?'
+  answer: 'Type the domain on the Domain page. It lists the DNS records GitHub Pages needs, each value copyable, and checks every few minutes whether public DNS points at GitHub. That path works with any registrar.'
+- question: 'Can Galascribe add the DNS records on Cloudflare for me?'
+  answer: 'Yes. The button Add these records on Cloudflare uses Cloudflare''s own authorization with two permissions, Zone Read and DNS Write, and no offline access. We revoke the access token when the chain of requests ends, and records are written as DNS only, not proxied.'
+- question: 'Does Galascribe change my existing DNS records without asking?'
+  answer: 'No. If every record we want is new or already identical, we write them at once. If one would be replaced, nothing is touched until you have seen a plan of what would be added, kept or replaced and chosen Apply or Don''t change.'
+- question: 'How long does a custom domain take on Galascribe?'
+  answer: 'The page says DNS changes can take from a few minutes to a day, the certificate can take up to 24 hours, and a setup expires if the records are not added within 7 days.'
+- question: 'Why keep Cloudflare records on DNS only?'
+  answer: 'GitHub has to see its own addresses to verify the domain and issue the certificate, and with Cloudflare''s proxy on it cannot. Once the certificate is issued the page offers to turn the proxy on, with SSL/TLS mode set to Full, not Full strict.'
 slug: your-own-domain-without-touching-dns
 redirects: []
 listen:

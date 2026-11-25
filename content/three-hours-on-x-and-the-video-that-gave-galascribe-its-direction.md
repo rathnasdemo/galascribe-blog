@@ -15,6 +15,19 @@ tags:
 - ai
 status: published
 publishedAt: '2026-10-29T06:19:33.000Z'
+summary: 'One night in July 2026 I lost three hours to a feed, and Galascribe began as the fix: a slow place for writing, with no feed, built to respect attention. Months in, our pitch had drifted to "articles from your videos". A video by Sandeep Swadia on writing with AI brought me back, and gave us our motto: Sound like no one else. A writing platform should build healthy habits, not chase virality.'
+faq:
+- question: 'Why was Galascribe created?'
+  answer: 'The founder lost three hours to X one night in July 2026 after flying back from India, and asked what a place for reading and writing would look like if it were built to respect attention. Galascribe came out of that question.'
+- question: 'Does Galascribe have a feed or a trending list?'
+  answer: 'No. There is no timeline, no trending list and no recommendations. Readers follow an author and hear from that author.'
+- question: 'What is Galascribe''s motto and where does it come from?'
+  answer: 'Sound like no one else. It comes from a video by Sandeep Swadia on writing with AI, which promised writing that is clearer, more insightful and unmistakably yours.'
+- question: 'Can a Galascribe author schedule posts?'
+  answer: 'Yes. Staggered release lets an author write several posts at once and have them go out on dates they choose, instead of all at once.'
+- question: 'Does Galascribe judge the quality of writing?'
+  answer: 'Not yet. The founder has ideas about how to measure quality but will not claim any of them until they are tested on real writers and proven to work.'
+updatedAt: '2026-11-25T18:00:00.000Z'
 createdAt: '2026-10-29T06:19:21.000Z'
 slug: three-hours-on-x-and-the-video-that-gave-galascribe-its-direction
 redirects: []
@@ -24,8 +37,6 @@ listen:
   format: conversation
 extensions: {}
 ---
-
-> **TL;DR:** One night in July 2026 I lost three hours to a feed, and Galascribe began as the fix: a slow place for writing, with no feed, built to respect attention. Months in, our pitch had drifted to "articles from your videos". A video by Sandeep Swadia on writing with AI brought me back, and gave us our motto: Sound like no one else. A writing platform should build healthy habits, not chase virality.
 
 It was the last week of July 2026. I had just flown back from India, I was jet-lagged, and at 10 PM I opened X. When I put the phone down it was 1:15 AM.
 

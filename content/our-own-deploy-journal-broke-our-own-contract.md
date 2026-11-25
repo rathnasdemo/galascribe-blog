@@ -16,6 +16,16 @@ tags:
 status: draft
 publishAfter: '2027-02-14'
 createdAt: '2026-10-25T17:12:26.000Z'
+summary: 'On 2026-09-28 every real publish failed with a 409 INVALID_SOURCE_STATE because the deploy kernel journaled a finished staging as a class and outcome pair its own contract forbids. Tests missed it because they checked a producer-side mirror of the contract. Validating the kernel''s real journal with the API''s own validator found it, plus two more mismatches where the kernel claimed more certainty than it had.'
+faq:
+- question: 'Why did every Galascribe publish fail with a 409 on 2026-09-28?'
+  answer: 'The deploy kernel journaled a staging that ran to completion as class request-accepted with outcome succeeded. The contract allows request-accepted only with outcome-unknown-reconciling, so the API refused the receipt with 409 INVALID_SOURCE_STATE. The fix journals a completed staging as provider-state with outcome succeeded.'
+- question: 'Why were the existing tests green when the contract was being broken?'
+  answer: 'They checked each journal entry against a mirror of the contract kept in the publish toolchain: a flat list of fields and allowed values. The mirror did not encode the cross-field matrix of which values may sit together, so the tests agreed with the producer and nothing in the suite acted as a consumer.'
+- question: 'What did the follow-up audit of the deploy kernel find?'
+  answer: 'Thirteen minutes later an audit of every class and outcome pair the kernel can emit found two more mismatches. When an adapter refused, the kernel journaled a clean rejected or succeeded observation and a failed attempt, though one adapter can refuse after it has written objects. Both now use outcome-unknown-reconciling and attempt outcome unknown.'
+- question: 'How do I test a producer and a consumer of the same document?'
+  answer: 'Run the producer''s real output, from its real end-to-end tests, through the consumer''s actual validator, including any constraint that spans two fields. If the consumer''s rules live in a database, put that constraint in the test too. A mirror of the rules written by the producer''s author passes whatever the author expected.'
 slug: our-own-deploy-journal-broke-our-own-contract
 redirects: []
 listen:

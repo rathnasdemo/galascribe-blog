@@ -17,6 +17,19 @@ tags:
 status: published
 createdAt: '2026-10-21T03:49:38.000Z'
 publishedAt: '2026-10-25T07:00:34.375Z'
+summary: 'A Galascribe site is a folder of Markdown files in a GitHub repository you own, published by default through GitHub Pages from that same repository. You can write in the app or clone the repository and edit anywhere, and the publish workflow runs in your GitHub account. The cost to us is that we cannot hold your content or your hosting, and likes and comments, which our service holds, have no export.'
+faq:
+- question: 'Where does my content live on Galascribe?'
+  answer: 'In a GitHub repository that belongs to you. Each article or page is a single Markdown file in content/ that begins with front matter, and your settings, author profile and images are plain files in the same repository.'
+- question: 'Can I edit my Galascribe site outside the app?'
+  answer: 'Yes. You can clone the site repository, edit in any text editor and push. A push you make by hand is safe but does not publish anything, and the next accepted publish deploys whatever the head is.'
+- question: 'Where is a Galascribe site built and hosted?'
+  answer: 'By default on GitHub Pages. The publish workflow, a file in your site repository, runs in your GitHub account on GitHub''s build minutes, not on Galascribe''s servers.'
+- question: 'What happens to my site if I leave Galascribe?'
+  answer: 'You leave with a clone of the site repository, because there is no export step for your writing. Likes and comments are held by our service and have no export today, and there is no documented way yet to build and publish without Galascribe.'
+- question: 'Does Galascribe create my site repository as me?'
+  answer: 'Yes. Creation uses your own GitHub authorization, never an installation token or the Galascribe GitHub App''s own key. Galascribe never deletes, renames or changes the visibility of a repository.'
+updatedAt: '2026-11-25T18:00:00.000Z'
 slug: your-writing-should-live-in-a-repository-you-own
 redirects: []
 listen:

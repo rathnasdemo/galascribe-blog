@@ -16,6 +16,16 @@ tags:
 status: draft
 publishAfter: '2027-02-12'
 createdAt: '2026-10-25T17:12:26.000Z'
+summary: 'On 2026-09-25 a production deploy passed every check, and then the site told a person ''This capability is not available''. Seven GitHub values had been set in the infrastructure repository''s environment, but a reusable workflow reads secrets from the calling repository, so each arrived empty. The fix checks the required names before the first side effect and names the repository and environment to fix.'
+faq:
+- question: 'Why were the secrets empty in a reusable GitHub workflow?'
+  answer: 'The API calls the deploy workflow with secrets: inherit, so every secrets and vars reference inside it resolves against the calling repository''s environment. The values had been set on the infrastructure repository instead, so each arrived as an empty string.'
+- question: 'How do I stop a deploy from shipping with empty secrets?'
+  answer: 'List the names your product cannot work without in one place, and fail the deploy before the first side effect if any is empty. Report every empty name at once, and say which repository and environment to fix.'
+- question: 'Should an empty optional value be passed to a container?'
+  answer: 'No. Omit it. An optional name sent as API_CREDENTIAL_KEK_VERSION= reached the container as set-but-empty, the Spring placeholder default did not apply, and the process exited before opening a listener.'
+- question: 'Why did the readiness probe not catch the missing secrets?'
+  answer: 'It asked whether the process answers, not whether it can do what it exists for. The post recommends a check that exercises the capability, not just the process.'
 slug: a-green-deploy-with-every-secret-empty
 redirects: []
 listen:

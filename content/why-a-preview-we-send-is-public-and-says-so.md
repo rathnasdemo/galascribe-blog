@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2027-01-15'
 createdAt: '2026-10-25T04:01:09.000Z'
+summary: 'Galascribe builds a preview site from a creator''s public videos before the first email, so the page is on the internet when the email arrives. The email says plainly that the preview is hidden from search engines, carries no ads and is not used in any other way, and that one email to our support address takes it down. Hidden from search engines is not private: anyone with the address can open it.'
+faq:
+- question: 'Is a Galascribe preview site public?'
+  answer: 'Yes, anyone with the address can open it. It is hidden from search engines, but that is not the same as private. The address for a channel that does not license its videos under Creative Commons Attribution carries a six-character suffix, which is obscurity, not access control.'
+- question: 'How are Galascribe preview sites kept out of search engines?'
+  answer: 'Every demo site shares one host, and the robots.txt at its root says Disallow: /, which covers every preview under demo.galascribe.com. The landing page also carries noindex. When a creator claims a site, it moves to their own address and the rule no longer applies.'
+- question: 'How do I have a Galascribe preview of my channel removed?'
+  answer: 'One email to our support address takes it down. A reply of just no, no thanks or not interested marks you as unsubscribed. Our own rule is to delete a preview on request or after 14 days without a reply.'
+- question: 'Why does Galascribe build a preview before the creator agrees?'
+  answer: 'So the first email links to the creator''s own page instead of an example from someone else''s channel. We state openly that this is a judgment call made before we have their consent.'
+- question: 'What should I check before sending something I made for a person?'
+  answer: 'Say where it lives and that it is public if it is, who can find it, what you do and do not do with it, how to have it removed and how fast, and what happens if they never answer. Then put the wording where a test can see it.'
 slug: why-a-preview-we-send-is-public-and-says-so
 redirects: []
 listen:

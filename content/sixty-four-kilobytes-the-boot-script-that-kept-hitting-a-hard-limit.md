@@ -16,6 +16,16 @@ tags:
 status: draft
 publishAfter: '2027-03-26'
 createdAt: '2026-10-25T17:12:57.000Z'
+summary: 'Galascribe''s production boot configuration rendered at 154,212 bytes against a 65,536-byte provider cap. Compressing it twice only bought a few days, so the script bundle now lives in a storage bucket named by its SHA-256 digest and is verified before it runs. Production user data is 22,420 bytes, and replacement is decided from host identity alone.'
+faq:
+- question: 'What is the user data size limit for a cloud-init boot configuration?'
+  answer: 'Our host provider rejects anything above 65,536 bytes of user data, a hard limit, with an HTTP 422. Our production document rendered at 154,212 bytes on 2026-09-22 and sat at 65,028 bytes three days later, 508 under the cap, after two rounds of compression.'
+- question: 'Why didn''t compression fix the 64 KB limit?'
+  answer: 'Per-file gzip only reached 78,413 bytes. A single Brotli bundle and then comment stripping bought headroom, but an unrelated commit used 722 bytes of it within three hours. The thing that grows keeps growing, so compression buys a number of commits, not a different outcome.'
+- question: 'How does Galascribe fetch the boot bundle safely?'
+  answer: 'The bundle is an object in a storage bucket named by its own SHA-256 digest. First boot runs sha256sum check with strict mode against the rendered digest before it decompresses and extracts, because the bundle runs as root. A wrong digest or unreachable object leaves a server a person can log into.'
+- question: 'Why did an unrelated setting replace the production server?'
+  answer: 'The module embedded the whole manifest in user data, so any change, even a flag nothing on the server reads, replaced the droplet. Two production runs did this. Replacement is now decided from a digest of host identity alone: base image, region, size, network, SSH keys and the bundle digest.'
 slug: sixty-four-kilobytes-the-boot-script-that-kept-hitting-a-hard-limit
 redirects: []
 listen:

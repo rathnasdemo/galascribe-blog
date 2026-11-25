@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2026-12-20'
 createdAt: '2026-10-25T04:01:09.000Z'
+summary: 'Galascribe''s cold outreach to creators has a person approving every row, a ceiling of ten emails per weekday, a 09:00 to 12:00 Chicago send window and a stop rule written as code. A plain no marks the address unsubscribed. As of 2026-10-24 about 2% of the channels we enrich pass our criteria, so supply limits volume, not sending.'
+faq:
+- question: 'How many cold emails does Galascribe send per day?'
+  answer: 'As of 2026-10-24 the ceiling is ten emails per weekday, counted on the Pacific date. No run sends more than five, each email waits 60 seconds after the last, and nothing goes at the weekend. A kill switch is one row in the sheet, and the next scheduled run reads it and stops.'
+- question: 'Does a person approve every outreach email at Galascribe?'
+  answer: 'Yes. The sender never mails a row until a person sets it to approved. The approve command refuses unless the row has an address, an enabled region, an address not on the do-not-email list, its own preview site, and a saved draft that passes the sender''s checks.'
+- question: 'What happens when someone replies no to a Galascribe outreach email?'
+  answer: 'A whole-reply or first-clause no, no thanks, stop or not interested marks the address as unsubscribed. So does a message whose subject starts with unsubscribe, even with an empty body. Every email carries a List-Unsubscribe header, and the Spam folder is scanned as well as the inbox.'
+- question: 'How does Galascribe choose which creators to email?'
+  answer: 'Discovery searches YouTube by topic and applies criteria written in code. A channel needs a known and enabled country, 2,000 to 2,000,000 subscribers, an upload within 180 days, a personal address rather than a role mailbox, and a topic match. Channels that fail land on a Rejected tab with every reason.'
+- question: 'Why did the scheduled outreach send job send nothing on 2026-10-21?'
+  answer: 'GitHub started the three runs between 3 hours 41 minutes and 4 hours 20 minutes late. The sender only mails a US creator between 09:00 and 12:00 Chicago time, so each run found the window shut and skipped every row. We now run the job every 30 minutes across the window and alert when nothing went out.'
 slug: outreach-without-spam-five-emails-a-day
 redirects: []
 listen:

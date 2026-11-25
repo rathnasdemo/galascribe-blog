@@ -16,6 +16,16 @@ tags:
 status: draft
 publishAfter: '2027-04-04'
 createdAt: '2026-10-25T17:12:57.000Z'
+summary: 'A sessionStorage mark meant to stop an endless Confirm it''s you loop told the screen something false three times in 77 minutes on 2026-09-26 and 27. The fixes: key the mark by a required caller id, give it an expiry, and treat started and completed as different states. The whole mechanism was later removed with the original UI on 2026-10-18.'
+faq:
+- question: 'What is a re-authentication loop guard?'
+  answer: 'When the API refuses a request with REAUTH_REQUIRED, the app offers a reconnect with GitHub. The guard writes a mark in sessionStorage before sending the person to GitHub, so that if the same refusal returns, the screen shows a terminal panel instead of offering the same button forever.'
+- question: 'Why did the first version of the guard fail?'
+  answer: 'It keyed the mark by route, but the Source screen mounts several refusal surfaces on one route. They shared the one mark, so confirming from any one of them marked or unmarked every other one on the page.'
+- question: 'Why must a loop guard distinguish started from completed?'
+  answer: 'A mark written when someone is sent to GitHub means started. Read as completed, it made a later, unrelated refusal look terminal even though no ceremony had finished. Only a proven round trip may promote a mark to completed.'
+- question: 'What checklist does the post give for any loop guard?'
+  answer: 'Who owns it, when it expires, what proves the guarded thing finished, and which path wipes it. Make the owner a required argument and test for collisions, give every mark an expiry, and clear it on every failure exit.'
 slug: the-re-authentication-guard-that-lied-three-times-in-two-days
 redirects: []
 listen:

@@ -3,8 +3,17 @@
   "schemaVersion": "2.0.0",
   "id": "01a15c65-9a71-782f-b76c-d0f002d9c6e5",
   "displayName": "Anand Rathna",
-  "biography": "",
-  "links": [],
+  "biography": "Founder of Galascribe, blog publishing software for a site you own. Writes about how it is built and what broke along the way.",
+  "links": [
+    {
+      "type": "x",
+      "uri": "https://x.com/galascribe"
+    },
+    {
+      "type": "linkedin",
+      "uri": "https://www.linkedin.com/in/galascribe"
+    }
+  ],
   "localized": [],
   "extensions": {}
 }

@@ -17,6 +17,19 @@ tags:
 status: published
 createdAt: '2026-10-21T04:12:17.000Z'
 publishedAt: '2026-11-15T08:16:20.827Z'
+summary: 'A Galascribe site is plain files, so likes and comments are held by the platform API, which built pages call from the reader''s browser. Readers sign in with GitHub through a redirect and get a 30-day token for one site, and the content-security policy now allows connections to https://api.galascribe.com. Reactions and comments are stored in our database, not in your repository, and there is no export for them today.'
+faq:
+- question: 'How do likes and comments work on a static Galascribe site?'
+  answer: 'Built pages ask the platform API for reactions and comments, because files cannot hold a shared count, identify who is pressing a button or enforce limits. Reading is public, and writing needs a signed-in reader.'
+- question: 'Where are Galascribe likes and comments stored, and can I export them?'
+  answer: 'They are stored in Galascribe''s database, not in your site repository. There is no export of comments or likes today.'
+- question: 'Do readers need a GitHub account to comment on a Galascribe site?'
+  answer: 'Yes. A reader is an existing Galascribe account signed in with GitHub, and there are no passwords or other providers. A reader without a GitHub account cannot comment, and we have not tried to solve that.'
+- question: 'How does Galascribe limit spam in comments?'
+  answer: 'The defaults are 60 reactions a minute, 5 comments a minute and 30 an hour, 10 comments an hour for accounts under a day old, and 20 reports an hour. Deterministic spam checks always run on new comments, and only a person removes a comment.'
+- question: 'Are likes and comments on by default on a Galascribe site?'
+  answer: 'No. The module is off unless gala/modules/interactions.json in the repository says otherwise. With no file, the built page gets no markup, no script and no requests.'
+updatedAt: '2026-11-25T18:00:00.000Z'
 slug: likes-and-comments-on-a-static-site
 redirects: []
 listen:

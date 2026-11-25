@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2027-01-31'
 createdAt: '2026-10-25T04:01:09.000Z'
+summary: 'A CSS reset with a specificity of (0,1,1) outranked single-class component rules in the same cascade layer, which left a sign-in button at contrast ratios of 1.09:1 and 1.21:1 against the 4.5:1 that WCAG asks for. Wrapping the resets in :where() brought their specificity to zero. An axe-core run of 300 scans across six themes, light and dark, then reported zero violations.'
+faq:
+- question: 'Why did my component''s CSS rule lose to a reset?'
+  answer: 'Inside one cascade layer, specificity decides. A reset such as an attribute selector plus button is (0,1,1) and beats a single-class rule at (0,1,0), whichever rule comes later in the file.'
+- question: 'How do I stop a CSS reset from outranking my components?'
+  answer: 'Wrap the reset in :where(), which contributes no specificity, put it before the component rules, and add a test that fails when a bare element-type reset appears.'
+- question: 'Do cascade layers fix specificity conflicts inside one layer?'
+  answer: 'No. Layers are compared before specificity, but two rules inside the same layer are still decided by specificity. Our lowest layer protects a theme''s token declarations, not rules arguing inside the base layer.'
+- question: 'How did Galascribe check its accessibility fixes?'
+  answer: 'With axe-core over rendered pages: six themes, each with the default palette and six presets, in light and dark, across every page kind. That is 300 scans, and after the fixes they reported zero violations.'
+- question: 'Is any Galascribe text still below the contrast target?'
+  answer: 'As of 2026-10-24, one preset, Graphite, has muted meta text at 4.05 to 4.25:1 over the light page glow in two themes, below our 4.5:1 aim. It was not fixed yet.'
 slug: a-css-reset-that-outranked-our-components
 redirects: []
 listen:

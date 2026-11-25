@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2026-12-11'
 createdAt: '2026-10-25T04:01:09.000Z'
+summary: 'Before a creator has heard of us, we can build a site from their videos: three articles, likes and comments on, hidden from search engines, in a GitHub organization we own. A creator claims it by proving they own the YouTube channel, then the repository itself is transferred to their GitHub account. As of 2026-10-18, no creator had completed a claim.'
+faq:
+- question: 'Why does Galascribe build a site before I have agreed to anything?'
+  answer: 'On 2026-10-23 we decided to build a preview for every prospect before the first email, so the email links to their own page instead of an example from another channel. While the site is ours it is hidden from search engines and removable on request.'
+- question: 'How do I prove I own the YouTube channel for a Galascribe claim?'
+  answer: 'By one of two routes. Google''s read-only YouTube permission checks that the claimed channel''s ID is among the channels your account owns, and we revoke the access on every outcome. Or paste a one-time code that expires in 24 hours into the channel description.'
+- question: 'What happens to the repository when I claim a Galascribe site?'
+  answer: 'Move my site transfers the repository itself, not a copy, to your GitHub account or organization. Canonical links, the sitemap and og:url then use your own address, the preview notice is gone, and likes and comments made before the move are kept.'
+- question: 'Does a claimed Galascribe site stay hidden from search engines?'
+  answer: 'No. The rule that hides previews lives on our preview host, not on yours, so search engines are allowed on your site unless you add a Disallow rule yourself.'
+- question: 'Has any creator claimed a Galascribe-built site yet?'
+  answer: 'As of 2026-10-18 every claim had been a rehearsal on a channel we own, and no creator had completed one.'
 slug: we-build-your-site-first-then-you-claim-it
 redirects: []
 listen:

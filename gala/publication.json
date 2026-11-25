@@ -4,11 +4,28 @@
   "id": "01a15c64-7f88-7a2f-9e28-40347da02d25",
   "slug": "galascribe",
   "title": "Galascribe",
-  "description": "Sound like no one else.",
+  "description": "Blog publishing software for a site you own. Notes from the team building Galascribe. Sound like no one else.",
   "canonicalBase": "https://blog.galascribe.com/",
   "defaultLanguage": "en-US",
   "authors": ["gala/authors/placeholder-author.json"],
-  "socialLinks": [],
+  "socialLinks": [
+    {
+      "type": "x",
+      "uri": "https://x.com/galascribe"
+    },
+    {
+      "type": "linkedin",
+      "uri": "https://www.linkedin.com/in/galascribe"
+    },
+    {
+      "type": "github",
+      "uri": "https://github.com/galascribe"
+    },
+    {
+      "type": "youtube",
+      "uri": "https://www.youtube.com/@Galascribe"
+    }
+  ],
   "policies": {
     "terms": {
       "title": "Terms",
@@ -29,5 +46,6 @@
   "listen": {
     "enabled": true
   },
-  "extensions": {}
+  "extensions": {},
+  "defaultImageRef": "assets/brand/social-card.png"
 }

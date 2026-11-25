@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2027-04-18'
 createdAt: '2026-10-25T17:12:26.000Z'
+summary: 'From the day the publish route landed until 2026-09-17, every POST to it answered 500, before the controller ran and before any authorisation decision, while our tests stayed green. A generated pattern annotation on a time field made Hibernate Validator throw during request binding. The fix strips those annotations, and a route test now drives the real filter chain.'
+faq:
+- question: 'Why did every publish request return a 500 error?'
+  answer: 'The generated getter returned an OffsetDateTime carrying a Pattern annotation. Hibernate Validator has no Pattern validator for a temporal type, so it throws UnexpectedTypeException while the request is bound, before the controller method runs.'
+- question: 'Why did the tests not catch the publish route failure?'
+  answer: 'Every test of publishing called the publish service directly. The route, the filter chain and the JSON binding were not part of any test.'
+- question: 'How was the publish route fixed?'
+  answer: 'The generation pipeline now strips those annotations from both generated trees. Jackson''s temporal deserialiser still refuses a non-instant with a 400, and a route test drives the route through the filter chain for both an immediate and a scheduled publish.'
+- question: 'What test should I write for a route that sits behind a framework?'
+  answer: 'One test per route that goes through the real stack with an HTTP-shaped request. It does not need to check much; it needs to prove that a request reaches your handler.'
+- question: 'Why can clock_timestamp() make a database trigger refuse a row?'
+  answer: 'It is volatile, so two calls in one statement can return different microseconds. A trigger that requires updated_at to equal created_at refused rows when the two reads straddled a tick. statement_timestamp() returns one value for the whole statement.'
 slug: every-publish-answered-500-before-any-code-ran
 redirects: []
 listen:

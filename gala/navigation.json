@@ -19,8 +19,39 @@
       "label": "About",
       "route": "/about",
       "children": []
+    },
+    {
+      "type": "external",
+      "label": "Try Galascribe",
+      "url": "https://app.galascribe.com/",
+      "children": []
     }
   ],
-  "footerItems": [],
+  "footerItems": [
+    {
+      "type": "external",
+      "label": "Galascribe",
+      "url": "https://app.galascribe.com/",
+      "children": []
+    },
+    {
+      "type": "external",
+      "label": "Pricing",
+      "url": "https://app.galascribe.com/pricing",
+      "children": []
+    },
+    {
+      "type": "external",
+      "label": "Alternatives",
+      "url": "https://app.galascribe.com/alternatives",
+      "children": []
+    },
+    {
+      "type": "external",
+      "label": "Compare",
+      "url": "https://app.galascribe.com/compare",
+      "children": []
+    }
+  ],
   "extensions": {}
 }

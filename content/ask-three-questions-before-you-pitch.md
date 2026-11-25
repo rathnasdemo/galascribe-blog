@@ -15,12 +15,22 @@ tags:
 - build-in-public
 status: draft
 createdAt: '2026-11-08T00:04:07.000Z'
+summary: 'Between 14 and 29 October 2026 we sent 39 cold emails to creators and got no positive reply. Every email led with what we had built, so we had skipped the only part of selling that is about the buyer. Our rule now: before any pitch, ask three questions. How do you do this today? What about it is broken? If nothing changes for a year, what happens? When the third answer is "nothing much", there is no sale, and the right move is to say so and leave.'
+faq:
+- question: 'What three questions should I ask before pitching a product?'
+  answer: 'How do you do this today? What about it is broken? If nothing changes for a year, what happens? Ask them in that order, and do not describe the product until the third answer.'
+- question: 'What happened with Galascribe''s cold email outreach to creators?'
+  answer: 'Between 14 and 29 October 2026 we sent 39 first emails to creators who run courses, memberships and newsletters. We got one bounce, one unsubscribe and no positive replies.'
+- question: 'Why did the 39 cold emails fail?'
+  answer: 'Every one opened with what we had built. A pitch assumes the reader does the task in a way you understand, that it hurts, and that it hurts enough to pay to fix, and we had asked about none of it.'
+- question: 'What should I do when the answer to the third question is ''nothing much''?'
+  answer: 'There is no sale. Say so and leave. You have learned that cheaply, instead of through a sequence of follow-ups.'
+- question: 'How should a first message change if I want to ask these questions?'
+  answer: 'It asks one real question about how the person works today, and the product is not mentioned until there is an answer. That means fewer sends and more conversations that end on purpose.'
 slug: ask-three-questions-before-you-pitch
 redirects: []
 extensions: {}
 ---
-> **TL;DR:** Between 14 and 29 October 2026 we sent 39 cold emails to creators and got no positive reply. Every email led with what we had built, so we had skipped the only part of selling that is about the buyer. Our rule now: before any pitch, ask three questions. How do you do this today? What about it is broken? If nothing changes for a year, what happens? When the third answer is "nothing much", there is no sale, and the right move is to say so and leave.
-
 We counted on 29 October 2026. Thirty-nine first emails, sent over fifteen days, to creators who run courses, memberships and newsletters. One bounce. One unsubscribe. Zero positive replies. Not a single "tell me more".
 
 The emails were not bad by the usual measures. A deliverability tester scored the sending domain 9.3 out of 10. The subject lines were plain. Each one went to a person we had actually looked at. And every one of them opened the same way: here is what we built for you, here is the link, have a look.

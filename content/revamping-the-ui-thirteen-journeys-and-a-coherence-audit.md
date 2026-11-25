@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2026-12-06'
 createdAt: '2026-10-25T04:01:09.000Z'
+summary: 'On 2026-10-12 a read-only audit of the Galascribe App found that individual screens were coherent but contradicted each other: one problem had four explanations, and a repository needing repair had five names. Sixteen of nineteen proposed work packages shipped that day. The post also covers the thirteen journeys and the deletion of the old interface on 2026-10-18.'
+faq:
+- question: 'What did the Galascribe interface audit of 2026-10-12 find?'
+  answer: 'Domain, Publish and Restore, Start and the editor were each coherent. The App broke down between areas. A repository needing repair had five names, a failed publish had five phrasings, connect had six meanings and address had five. Several screens also promised things the product did not do.'
+- question: 'What were the thirteen journeys?'
+  answer: 'Thirteen flows told from the person''s side, each a numbered list of what the person sees including failure states. They cover putting a picture in a post or scheduling one, handing over or moving an organisation, importing a repository, previewing, custom roles, closing an account, a custom domain, removing the Galascribe mark, shorter editions and appealing a removed comment. They also cover the operator.'
+- question: 'How can I audit my own product for coherence?'
+  answer: 'Run three checks. Dump every user-facing string and count the words used for each noun and failure; a concept with more than one name is a finding. For every promise on a screen, find the code that serves it. Follow every refusal that sends someone elsewhere and check that something can be pressed there.'
+- question: 'Why did Galascribe delete its old interface?'
+  answer: 'On 2026-10-18 we deleted the old interface, which had 35 routes and about 35,000 lines of source plus about 29,000 lines of tests, because two interfaces meant twice the code to keep right. We ported the operator overview, abuse queue, plans, webhooks and caches first, and dropped three things on purpose.'
+- question: 'Why was moving a site between organisations hidden?'
+  answer: 'The flow was complete but its final step settled as failed. Moving a site has to move its data, and on our schema that needs a rework: 62 tables carry the publication id, 57 are under row-level security that refuses a different organisation, and 29 have triggers that refuse an organisation change. The App keeps the section behind a flag.'
 slug: revamping-the-ui-thirteen-journeys-and-a-coherence-audit
 redirects: []
 listen:

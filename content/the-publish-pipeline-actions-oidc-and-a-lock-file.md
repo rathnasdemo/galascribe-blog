@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2026-11-29'
 createdAt: '2026-10-25T04:01:09.000Z'
+summary: 'A Galascribe site''s publish workflow holds no long-lived secret. Each run gets a short-lived, single-use GitHub identity token, the jobs that touch your files cannot request one, and two pins fix what runs: the caller pins the toolchain by commit and gala.lock.json pins the inputs by exact version and SHA-256. Caller and lock must move together, or publishes fail.'
+faq:
+- question: 'Does a Galascribe publish workflow store any secret in my repository?'
+  answer: 'No. The workflow file names three optional DigitalOcean Spaces keys for a destination we do not offer yet, and a GitHub Pages site sets none of them. The Pages deploy job receives only its job-scoped GitHub token and OIDC authority.'
+- question: 'How does a Galascribe publish run get authorized?'
+  answer: 'The authorize job asks GitHub for a short-lived, single-use identity token for one repository, commit and run, and sends it to our API with the frozen build''s metadata. The API answers with a deployment intent, and the deploy job takes every value it acts on from that intent.'
+- question: 'Can a push to main or a pull request trigger a Galascribe publish?'
+  answer: 'No. The workflow has two triggers, create and workflow_dispatch, and a guard that admits only a branch named gala/publish/ followed by an operation id. A push to main, a pull request or a schedule starts nothing.'
+- question: 'What does gala.lock.json do?'
+  answer: 'It pins the build inputs by exact version and SHA-256: the schemas, the template, the theme and the publisher packages, including the deploy adapter. The lock is the build''s only source for the theme, and our API admits a lock row only if it matches a release it knows.'
+- question: 'Why must the caller and the lock file move together?'
+  answer: 'On 2026-10-23 a new Pages adapter reached npm and the adopting round moved the callers of existing sites without moving their locks. Publishes on the newest template contract then failed with LOCK_ADAPTER_IDENTITY_INVALID until we reverted and adopted the adapter properly.'
 slug: the-publish-pipeline-actions-oidc-and-a-lock-file
 redirects: []
 listen:

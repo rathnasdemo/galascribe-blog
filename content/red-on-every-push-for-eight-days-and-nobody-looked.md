@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2027-02-26'
 createdAt: '2026-10-25T17:12:26.000Z'
+summary: 'A CI run on our publish toolchain stayed red on every push from 2026-10-01 to 2026-10-09, and because the first failing job ended the run, the larger test suite behind it never ran. The cause was one test that read the runner''s commit variable. Earlier gate failures taught the same lesson, so the gate now runs every stage and reports every failure.'
+faq:
+- question: 'What happens when a CI build stays red for days?'
+  answer: 'In our case the run stopped at the first failing job, so the repository-level tests behind it had not executed once in eight days. The gate was a disabled gate with a red light on. We now treat a build red for a day as an incident, not a mood.'
+- question: 'Why does set -e make a CI gate weaker?'
+  answer: 'At the top level of a gate script, set -e turns the first failure into a veto over every later stage. After a crash on 2026-09-25 our script skipped three adoption tests, six droplet suites and the convergence suite. Every stage now runs in its own subshell, failures accumulate, and the script exits non-zero at the end.'
+- question: 'Why did a Terraform lock file pass locally but fail in CI?'
+  answer: 'The provider lock file held one hash per provider, recorded on the owner''s Mac. The Linux runners on GitHub Actions download a different package for the same version, whose hash was missing, and read-only lock mode refused it. Local runs stayed green because the folder already held the macOS package.'
+- question: 'How should a secret scan be allowlisted?'
+  answer: 'Allowlist by exact line or fingerprint and keep the reason next to the entry. For nine decoy keys and marker tokens in secret-handling tests we added an allow comment on each exact matched line, not on a path or rule, so a real secret anywhere else in those files would still fail.'
+- question: 'Should a secret scan run on every push?'
+  answer: 'We moved it to nightly during a CI split on 2026-09-22 and put it back on every push the same afternoon, in both the infrastructure code and the API. The commit message said a leaked secret sitting on main for up to 24 hours is unacceptable. When you cut CI cost, write down which guarantees moved.'
 slug: red-on-every-push-for-eight-days-and-nobody-looked
 redirects: []
 listen:

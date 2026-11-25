@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2027-04-25'
 createdAt: '2026-10-25T17:12:26.000Z'
+summary: 'Across 16 repositories and 3,130 commits made since 2026-09-15, we found 13 kinds of mistake repeated in different places, rather than a long list of different bugs. Examples are gates that cannot fail, silent fallbacks, pinned counts and cron treated as a clock. Counts come from keyword matches on commit subjects, so they are upper bounds as of 2026-10-25.'
+faq:
+- question: 'What kinds of mistakes did Galascribe find in its commit history?'
+  answer: 'Thirteen classes, including gates that cannot fail, silent fallback on an empty result, passed locally but failed on the real host, derived artifacts that drift, pinned counts, cron treated as a clock, and success words before verification.'
+- question: 'How reliable are the counts in the Galascribe commit review?'
+  answer: 'They come from keyword matches on commit subjects, not from a database, so they are marked about and are upper bounds. We opened at least one commit for every class. Everything is as of 2026-10-25.'
+- question: 'What question do we ask about silent fallbacks?'
+  answer: 'Make an empty result an error, not a default, and test it with the real access rules.'
+- question: 'What do we ask about gates and derived artifacts?'
+  answer: 'For gates, break the thing on purpose and watch the gate go red before you trust it green. For derived artifacts, regenerate in CI and fail on any difference, or do not commit the artifact.'
+- question: 'How can I run the same review on my own repositories?'
+  answer: 'Pick the three classes your own history shows most, search your commit subjects for their keywords, and write the one question for each. A bug found again and again is a missing habit, and a habit can be written down.'
 slug: what-3000-commits-say-about-how-we-fail
 redirects: []
 listen:

@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2026-12-04'
 createdAt: '2026-10-25T04:01:09.000Z'
+summary: 'Linking a GitHub repository in production failed because our API treated a 403 from GitHub as a lost credential and sent people through sign-in again, in a loop. The cause was using a token from our OAuth App on a route that accepts only GitHub App user tokens. We added a second OAuth client on 2026-09-27 and changed a 403 to answer 503 CAPABILITY_UNAVAILABLE.'
+faq:
+- question: 'What is the difference between a GitHub OAuth App and a GitHub App?'
+  answer: 'An OAuth App signs a person in. A GitHub App is installed on accounts and repositories and has its own OAuth client for acting on behalf of a signed-in user. They issue different tokens: ours begin gho_ for the OAuth App and ghu_ for the GitHub App.'
+- question: 'Why did repository linking loop back to sign-in?'
+  answer: 'GET /user/installations accepts only a GitHub App user token, and we called it with the OAuth App token from sign-in, so GitHub answered 403. Our API read that as a lost credential and answered 401 REAUTH_REQUIRED, and the app sent the person through GitHub again.'
+- question: 'How did Galascribe fix the sign-in loop?'
+  answer: 'A 403 from GitHub without a rate-limit signal now answers 503 CAPABILITY_UNAVAILABLE. On 2026-09-27 we added a second OAuth client: sign-in keeps the OAuth App, and repository linking and reconnection use the GitHub App''s own client.'
+- question: 'How long do GitHub App user tokens last?'
+  answer: 'Eight hours, which is 28,800 seconds. An OAuth App''s token response carries no expires_in. On 2026-09-28 the API began keeping GitHub''s rotating refresh token with the credential and refreshing before use.'
+- question: 'How should I add Connect GitHub to my own product?'
+  answer: 'Write next to each GitHub call which token class it needs, and log the class as a prefix, never the token. Decide what a 403 means before you ship, and test against real GitHub, because a local stand-in did not show this bug.'
 slug: the-sign-in-bug-that-cost-a-week
 redirects: []
 listen:

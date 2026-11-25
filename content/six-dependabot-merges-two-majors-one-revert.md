@@ -16,6 +16,16 @@ tags:
 status: draft
 publishAfter: '2027-03-05'
 createdAt: '2026-10-25T17:12:26.000Z'
+summary: 'On the morning of 2026-09-26 unreviewed Dependabot merges broke main in two Galascribe repositories, including major upgrades to Spring Boot and Gradle. We reverted six dependencies in the API, pinned webauthn4j back and reverted two schema package bumps. Dependabot is now grouped and capped, ignores majors where a human must decide, and its pull requests run CI only with a label.'
+faq:
+- question: 'What broke when Dependabot merged unreviewed updates?'
+  answer: 'In the API, six merges landed on the reviewed baseline, including Spring Boot 4.1.1 and Gradle 9.7.1, and we reverted them. In the schema package, TypeScript 7.0.2 broke npm ci with an ERESOLVE error and a yaml bump collided with a test pinned to 2.9.0. We reverted those two.'
+- question: 'Why was webauthn4j pinned to 0.29.7?'
+  answer: 'The bump from 0.29.7 to 0.31.10 broke dependency verification for nine artifacts. The new webauthn4j-core POM depends directly on Jackson 3, version 3.2.1, a different namespace from the Jackson 2.21.x our stack uses. We pinned back to the last reviewed version and the Jackson 3 lockfile entries disappeared.'
+- question: 'How should I configure a dependency bot so it cannot break main?'
+  answer: 'Group and cap its pull requests. Ignore major versions for deliberately gated packages. Run CI on its pull requests only when a maintainer adds a label. Pin packages you cannot review, such as webauthn4j here, until someone reads them. Majors need a person whatever the bot''s title says.'
+- question: 'Can Dependabot merge without review?'
+  answer: 'That depends on your settings, and the question is worth checking. Our records do not say whether an auto-merge setting or a person clicking through produced the merges, only that the API revert says they landed without review. Check whether your bot can merge or only open pull requests.'
 slug: six-dependabot-merges-two-majors-one-revert
 redirects: []
 listen:

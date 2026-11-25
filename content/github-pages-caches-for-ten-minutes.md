@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2027-01-03'
 createdAt: '2026-10-25T04:01:09.000Z'
+summary: 'GitHub Pages serves responses with cache-control max-age=600, and we found no way for a client to bypass its edge cache: query strings and no-cache headers both still returned a cache hit. On 2026-10-22 that made a publish check read the old version and turn red while the site was live. Adapter 0.1.2 now polls with backoff until the marker and digest match, for up to eleven minutes.'
+faq:
+- question: 'How long does GitHub Pages cache a page?'
+  answer: 'The responses we measured on 2026-10-22 carried cache-control: max-age=600, which is ten minutes, along with x-cache and age headers.'
+- question: 'Can I bypass the GitHub Pages cache with a query string or a no-cache header?'
+  answer: 'No. A request with a unique query string still came back x-cache: HIT, and so did one carrying Cache-Control and Pragma no-cache. We found no way for a client to bypass the edge cache.'
+- question: 'Why did a Galascribe publish turn red while the site was live?'
+  answer: 'The previous publish''s verification had left every page in the cache for ten minutes. The next publish read each page once and got the old version, so the check reported DEPLOY_NOT_ACTIVATED with verified=false, while our API recorded the same deployment as ACTIVE_VERIFIED one second later.'
+- question: 'How does the Galascribe Pages adapter wait for the new version?'
+  answer: 'It reads again, waiting 5 seconds at first and doubling up to 30, until the marker and the artifact digest match. The deadline is the max-age the origin declares (600 seconds if none, capped at 900) plus a margin of 60 seconds, which is 660 seconds with GitHub''s value.'
+- question: 'How should I check a GitHub Pages deploy myself?'
+  answer: 'Read max-age from the response and wait that long plus a margin, compare an identity such as a digest in a marker file, back off between reads, and bound the wait by time. Skip cache-busting query strings and no-cache headers, since neither worked.'
 slug: github-pages-caches-for-ten-minutes
 redirects: []
 listen:

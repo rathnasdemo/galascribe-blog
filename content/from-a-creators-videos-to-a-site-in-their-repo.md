@@ -17,6 +17,19 @@ tags:
 status: published
 createdAt: '2026-10-21T03:49:38.000Z'
 publishedAt: '2026-10-30T07:20:32.063Z'
+summary: 'Galascribe can turn a YouTube channel into articles drafted from the creator''s own transcripts, show them on a labelled preview site hidden from search engines, and move the site into the creator''s GitHub organisation after they claim it. Automatic checks gate every draft. Onboarding from a channel is operator-run today, and no creator has completed the claim and move yet.'
+faq:
+- question: 'How does Galascribe turn YouTube videos into blog articles?'
+  answer: 'It lists the channel''s uploads, skips Shorts, short videos, live streams and members-only videos, gets a transcript for each video, and a language model writes each article from that transcript. The rules allow only what the video says, in the creator''s voice. For the demo it takes the three most-viewed long videos.'
+- question: 'What checks are run on articles drafted from video transcripts?'
+  answer: 'The front matter must validate against the schema, every timestamp link must fall inside the video''s length, every figure must appear in the transcript, and the article''s length relative to the transcript must sit inside set bounds. A second pass with a cheaper model flags unsupported sentences, and above a threshold the video is held.'
+- question: 'How does a creator claim a preview site built from their videos?'
+  answer: 'They open a claim link, sign in with GitHub and prove they own the channel. The preferred proof is Google''s read-only YouTube permission, used once and revoked. The fallback is a one-time code, valid for 24 hours, that they paste into their channel description.'
+- question: 'Are Galascribe preview sites visible to search engines?'
+  answer: 'No. A preview site says it is a preview and is hidden from search engines by one robots.txt at the root of the shared host. When the site moves to the creator''s account it leaves that host and the block stops applying.'
+- question: 'Can a creator start the YouTube-to-site route on their own?'
+  answer: 'No. Onboarding from a channel is operator-run today. Galascribe runs the steps on a machine it operates.'
+updatedAt: '2026-11-25T18:00:00.000Z'
 slug: from-a-creators-videos-to-a-site-in-their-repo
 redirects: []
 listen:

@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2027-01-08'
 createdAt: '2026-10-25T04:01:09.000Z'
+summary: 'A Galascribe post''s likes and comments belong to an ID stamped into its front matter, not to its address, so renaming a post moves nothing in the database. The decision dates from ADR-006 on 2026-08-09, and the second version kept it while changing the ID to a UUIDv7, requiring it in every file and recording old addresses in a redirects list. The post also covers what this costs.'
+faq:
+- question: 'What happens to likes and comments when I rename a post on Galascribe?'
+  answer: 'They stay. Reactions and comments are keyed by publication and content ID, not by URL, so a rename needs no data migration.'
+- question: 'What does Galascribe do with the old address after a post is renamed?'
+  answer: 'The old route is appended to the post''s redirects list, up to 32 per post. At build time each old route gets a small HTML page that refreshes to the current address and carries a canonical link, which is weaker than a server redirect.'
+- question: 'What kind of ID does a Galascribe post use?'
+  answer: 'A lowercase UUIDv7, required in the front matter of every article, page and edition, and immutable once published.'
+- question: 'What should I do when I copy a Galascribe post file to start another?'
+  answer: 'Give the copy a new id as well as a new slug. Two files with one ID would share one set of likes and comments.'
+- question: 'Why not use the slug as the key for likes and comments?'
+  answer: 'A rename would orphan every attached record. A composite of site, slug and language is just as fragile and would split the engagement across language variants of one article.'
 slug: an-article-is-an-id-not-a-slug
 redirects: []
 listen:

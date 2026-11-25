@@ -17,6 +17,19 @@ tags:
 status: published
 createdAt: '2026-10-25T04:01:09.000Z'
 publishedAt: '2026-11-22T09:51:55.916Z'
+summary: 'Ghost, Substack and WordPress.com do things Galascribe does not, including email delivery to subscribers, paid subscriptions and a wider choice of themes. The one structural difference we chose is that your writing is Markdown files in a GitHub repository you own, so leaving is a git clone. Likes and comments are held in our database with no export, and there is no documented way yet to build and publish without Galascribe.'
+faq:
+- question: 'What does Galascribe lack compared with Ghost, Substack and WordPress?'
+  answer: 'As of 2026-10-24 Galascribe cannot send your posts to subscribers by email, and you cannot charge your readers through it. It has no native apps, no short-form feed, no recommendations between sites and six themes. For analytics the one option is Google Analytics 4, which you switch on yourself.'
+- question: 'Where does my writing live on Galascribe compared with Ghost or Substack?'
+  answer: 'On Galascribe the writing is a Markdown file in a GitHub repository that belongs to you. In Ghost, Substack and WordPress the application holds it, which our reading is means posts are rows in a database.'
+- question: 'Can I take my content with me if I leave Galascribe?'
+  answer: 'Your writing is already files in your repository, so leaving is a git clone. Likes and comments are held in our database and have no export today.'
+- question: 'Can I build and publish a Galascribe site without Galascribe?'
+  answer: 'There is no documented way today. The files are plain Markdown and the renderer is published as versioned packages, so nothing stops you rendering them another way, but we have not written that guide.'
+- question: 'When should I choose Ghost or Substack instead of Galascribe?'
+  answer: 'If you want to email subscribers and charge for it from one place today. Pick Substack if the network and the apps matter, and Ghost if you want to run the stack yourself or care that it takes no cut of your revenue beyond Stripe''s fees.'
+updatedAt: '2026-11-25T18:00:00.000Z'
 slug: where-we-differ-from-ghost-substack-and-wordpress
 redirects: []
 listen:

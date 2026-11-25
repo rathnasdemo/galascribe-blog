@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2026-12-27'
 createdAt: '2026-10-25T04:01:09.000Z'
+summary: 'GitHub Pages serves every page of a Galascribe site, and the platform hosts nothing. We chose this because mirroring articles on our own domain was blocked, and it removed duplicate content, media hosting and CDN cost. The price is that authors inherit Pages limits: 1 GB site size, 100 GB soft monthly bandwidth, 10-minute deploys. Pages is also the only publish destination today.'
+faq:
+- question: 'Does Galascribe host my site?'
+  answer: 'No. All HTML is served by GitHub Pages, from your own domain or username.github.io. The platform hosts nothing. The app at app.galascribe.com is HTML we serve, but none of it is an author''s article.'
+- question: 'What are the GitHub Pages limits for a Galascribe site?'
+  answer: 'A published site may be no larger than 1 GB, with a soft bandwidth limit of 100 GB per month. Deployments time out after 10 minutes. The soft limit of 10 builds per hour does not apply to a custom GitHub Actions workflow, which is how Galascribe publishes.'
+- question: 'Why does Galascribe publish only to GitHub Pages?'
+  answer: 'The earlier design mirrored articles to a page on our own domain, and as we understood GitHub in August 2026 that was blocked outright, because it enforces one repository per custom domain. A reverse proxy or per-user subdomains would have brought back infrastructure and liability, so both were rejected.'
+- question: 'Can I sell products directly from a site on GitHub Pages?'
+  answer: 'Read GitHub''s terms first. Its page says Pages is not intended for or allowed to be used as a free web-hosting service to run your online business, and it extends that to sites mainly focused on commercial transactions or commercial software as a service.'
+- question: 'Can I publish a Galascribe site somewhere other than GitHub Pages?'
+  answer: 'Not today. GitHub Pages is the only destination a creator can publish to. The contract describes DigitalOcean Spaces and a local directory, but the Spaces option is not offered yet, so there is no second host inside the product.'
 slug: the-platform-that-serves-no-html
 redirects: []
 listen:

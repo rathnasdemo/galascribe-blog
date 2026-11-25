@@ -17,6 +17,17 @@ tags:
 status: published
 createdAt: '2026-10-25T06:54:32.000Z'
 publishedAt: '2026-10-25T18:10:10.000Z'
+summary: 'We pointed our outreach automation at 23 creators, and in four hours it built 23 preview sites, spent four to five million tokens and used half of a week''s limit on our subscription, before any email had gone out. Preview sites are now designed to be built only when the creator clicks, and that is designed but not yet built. The faithfulness check, which rejected three drafts, is the part that worked.'
+faq:
+  - question: 'How much did it cost to pre-build 23 preview websites for creators?'
+    answer: 'Four hours, four to five million tokens and half of a week''s limit on the subscription. Each preview took 8 to 12 model calls, 150,000 to 250,000 tokens and 9 to 11 minutes, which is $0.29 to $0.91 at API prices.'
+  - question: 'What is a Galascribe preview site?'
+    answer: 'A small site of three articles, each written from one of the creator''s videos and checked by a second model against the transcript. It is published where search engines are told to ignore it, and an email link says it was built for them. One email takes it down.'
+  - question: 'When does Galascribe build a creator''s preview site now?'
+    answer: 'The decision of 2026-10-25 is to generate the site when the creator clicks, not before. As of that date it is designed and not yet built, and the scheduled job that pre-built sites is switched off.'
+  - question: 'What does the faithfulness check do?'
+    answer: 'It sends each draft to a second model with the transcript and asks whether the article says anything the video did not. On the night of 2026-10-24 it rejected three drafts, so those three sites were not published.'
+updatedAt: '2026-11-25T18:00:00.000Z'
 slug: we-pre-built-23-websites-nobody-had-asked-for
 redirects: []
 listen:

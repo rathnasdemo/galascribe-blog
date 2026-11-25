@@ -16,6 +16,16 @@ tags:
 status: draft
 publishAfter: '2027-04-09'
 createdAt: '2026-10-25T17:12:26.000Z'
+summary: 'On 2026-10-08 publishing required a sign-in under five minutes old, so a person could write, save and then be refused at Publish. We widened the server window to 12 hours, then fixed the App: it checks sign-in before the save, resumes the same publish after confirmation, and calls a post Published only once the site read says live. The 12-hour window covers publishing only.'
+faq:
+- question: 'Why did Galascribe return a 401 after saving a post?'
+  answer: 'Publishing required a sign-in within the last five minutes. A person could write for longer, save, and then be refused at Publish because the sign-in was too old. The refusal arrived after the work was saved, the worst moment to be asked who you are.'
+- question: 'What does Published mean in the Galascribe App?'
+  answer: 'A post is Published only once the site is live. The App shows Waiting to publish, Publishing, Couldn''t go live or Not confirmed live from the site read. Not confirmed live exists so that not knowing can look like not knowing.'
+- question: 'Why not just lengthen the sign-in window for everything?'
+  answer: 'A longer window only moves the failure to its edge, less often and at a worse time, and it weakens a protection to hide a user interface problem. On 2026-10-17 ownership transfer kept the standard recent-sign-in step-up, and the 12-hour window stayed for publishing only.'
+- question: 'How should a security prompt behave in the middle of an action?'
+  answer: 'It should resume, not restart. Store the action and its idempotency key, send the person to prove who they are, and carry on with the same one. Check the thing that can fail, here the sign-in, before accepting the work that depends on it.'
 slug: save-then-401
 redirects: []
 listen:

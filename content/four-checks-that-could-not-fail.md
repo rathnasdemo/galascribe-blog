@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2027-02-21'
 createdAt: '2026-10-25T17:12:57.000Z'
+summary: 'Four checks in our own tooling could not fail. An accessibility harness opened pages over file:// and never loaded a stylesheet, a contrast checker printed SKIPPED for gradients, a verifier had to be restored to strict validation 45 seconds after it was added, and a dead-key search found each key in its own file. The post lists three habits that make a gate prove it is looking at the real thing.'
+faq:
+- question: 'Why was the theme harness''s axe report meaningless?'
+  answer: 'The harness opened the rendered fixture over file://, where root-absolute stylesheet links point at the filesystem root and return 404. The page rendered with browser defaults only, and the light and dark screenshots came out identical.'
+- question: 'How does the harness now prove it is looking at the real page?'
+  answer: 'On every run it asserts that a theme stylesheet came back with a 200, that a computed style on the publication''s root element differs from the browser default, and that the light and dark screenshots differ in bytes.'
+- question: 'Should a skipped check count as a pass?'
+  answer: 'No. Give ''I could not check'' its own outcome, with a reason, and never roll it into the green total. Since version 0.4.0, our contrast checker measures gradients against every color stop, and a gradient it cannot read stays SKIPPED.'
+- question: 'How can I tell that a gate can actually fail?'
+  answer: 'Feed it a known failure before you trust a green: plant a dead key, a gradient with a pale stop, an invalid config or a page with no CSS, and watch the gate go red.'
+- question: 'What did the fixed message-key gate find?'
+  answer: '219 unused keys, of which 196 belonged to the platform message file of the removed original UI. The other 23 were scattered through the editor, comments, domain, organisations, platform overrides, prism and landing copy.'
 slug: four-checks-that-could-not-fail
 redirects: []
 listen:

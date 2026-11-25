@@ -16,6 +16,16 @@ tags:
 status: draft
 publishAfter: '2027-04-02'
 createdAt: '2026-10-25T17:12:26.000Z'
+summary: 'At 06:52 Pacific on 2026-10-23 we added a CI workflow to our user template, and at 07:03 we removed it because it broke repository set-up. The API copies every template file outside the tooling directory into new sites and refuses any .github path except the caller workflow. A file in a template repository is product, not tooling, unless something stops it from reaching users.'
+faq:
+- question: 'How does Galascribe create a new site repository from its template?'
+  answer: 'The API creates a new repository from the user template by copying files, not by cloning it. Everything outside the template''s own tooling directory is copied, and of everything under .github only the caller workflow is allowed.'
+- question: 'Why did adding a CI workflow to the template break set-up?'
+  answer: 'The API refuses any .github path except the caller, and a refusal during set-up means set-up fails. The removal commit says the workflow broke repository set-up.'
+- question: 'What should I check before adding a file to a template repository?'
+  answer: 'Find the copy rule, find the refusal rules, and run set-up from the template as the last step of your change, with the file included.'
+- question: 'Where should maintainers'' CI for a template repository live?'
+  answer: 'In the template''s tooling directory, or in the publish toolchain''s repository aimed at the template. Neither puts a file in a customer''s repository.'
 slug: files-in-a-template-repo-are-product
 redirects: []
 listen:

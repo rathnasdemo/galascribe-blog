@@ -17,6 +17,18 @@ tags:
 status: draft
 publishAfter: '2027-01-01'
 createdAt: '2026-10-25T04:01:09.000Z'
+summary: 'On 2026-10-03 we found that no production publish had ever completed. Once our edge and configuration were fixed, GitHub refused the Pages deploy leg thirteen ways in all. Ten came from a GitHub value or behavior we had assumed instead of measured. Our rule: measure the value on a real runner with a scratch workflow before you pin it, and print only its structure, never the value.'
+faq:
+- question: 'Why did the first Galascribe Pages deploys fail on GitHub runners?'
+  answer: 'Ten of thirteen failures came from a GitHub value or behavior we had assumed instead of measured, such as the token host, the request path shape, the bearer size and the digest format. The other three were mistakes in our own code that real runs exposed.'
+- question: 'Why did our tests pass when real GitHub runs failed?'
+  answer: 'Our fixtures were written from the same assumptions as the code, so each test confirmed the guess. A fixture that agrees with its code shows the code is consistent. It says nothing about GitHub.'
+- question: 'How should I validate values that a CI provider hands me?'
+  answer: 'Measure on a real runner before you pin. Put a scratch workflow in a throwaway repository that prints only structure, such as lengths, character classes and JSON keys, never the value itself, since some values are credentials. Then write the validator.'
+- question: 'What format does a GitHub Pages artifact need?'
+  answer: 'Pages processes a standard, zip-wrapped artifact holding an uncompressed tar. A gzip tar fails and a raw upload sits queued forever. The tar also needs directory entries and root owner names, because file entries alone with empty owner names are refused.'
+- question: 'Why did fixing twelve failures take nearly nineteen hours?'
+  answer: 'A failed run leaves its operation in a terminal state, and Re-run failed jobs is refused by design. Each fix needed a toolchain commit, a pin bump and a fresh repository to publish from, so each one needed its own round trip to find the next failure.'
 slug: thirteen-failures-before-the-first-pages-deploy-worked
 redirects: []
 listen:

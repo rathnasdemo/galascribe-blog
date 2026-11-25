@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2027-03-14'
 createdAt: '2026-10-25T17:12:26.000Z'
+summary: 'We built three schedulers for this blog between 2026-10-20 and 2026-10-24: a cron job in the outreach tool, a runner in the blog''s own repository, then none. The runner was added at 09:37 Pacific on 2026-10-24 and 1,326 of its 1,329 lines were deleted 3 hours 44 minutes later. The blog now uses Galascribe''s Staggered release setting, where a draft''s publishAfter date decides the day.'
+faq:
+- question: 'How do I schedule a post on Galascribe?'
+  answer: 'Switch on Staggered release in the App and set a timezone. A draft that carries publishAfter: YYYY-MM-DD in its front matter is published by Galascribe on that day in that timezone, and a draft with no date stays a draft.'
+- question: 'Does Require review still apply to scheduled Galascribe posts?'
+  answer: 'Yes. Require review still applies to every release, so the check that a human has looked at a post did not move.'
+- question: 'Why did Galascribe build three schedulers for its own blog?'
+  answer: 'Each was correct for the problem in front of us, but none asked whether a customer would want the same thing. The runner''s rules, ordering, approval, retries and a stale-copy guard, are what any customer who schedules posts would want, and we run a publishing platform.'
+- question: 'How do I see which Galascribe posts are scheduled?'
+  answer: 'The Posts page shows dated drafts as Scheduled, and Home shows the next release.'
+- question: 'What should I ask before building plumbing for my own product?'
+  answer: 'Write down the customer who would want the same thing before you write the first line. If you can name one, build it as a product feature. If you cannot, build the small version where your own content already lives.'
 slug: we-built-the-blog-scheduler-three-times-in-four-days
 redirects: []
 listen:

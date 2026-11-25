@@ -16,6 +16,16 @@ tags:
 status: draft
 publishAfter: '2027-02-19'
 createdAt: '2026-10-25T17:12:26.000Z'
+summary: 'The compatibility catalogue in our schema package listed 46 pairings, all at 2.0.0, through eleven minor releases, and nothing read it. On 2026-09-25 we deleted it and replaced it with a gate that diffs every schema against a committed snapshot and fails on any breaking change. We also found a dead npm script and adversarial tests that only checked themselves.'
+faq:
+- question: 'Why did Galascribe delete its schema compatibility catalogue?'
+  answer: 'It listed 21 contracts and 46 pairings, every one at 2.0.0, while the package shipped 2.1.0 through 2.11.0. The checker validated the catalogue against itself, and nothing in the API, App or publish toolchain read it. We removed it rather than repair a safety net with no consumer.'
+- question: 'What replaced the compatibility catalogue?'
+  answer: 'A script that diffs every root schema against a frozen, committed snapshot and classifies each difference as additive or breaking. Any breaking difference fails the build. The snapshot is committed rather than fetched from the registry, so the gate needs no network and advances only at release time.'
+- question: 'Why did the prepublishOnly script never run?'
+  answer: 'The package''s npm configuration sets ignore-scripts=true, which disables every lifecycle script. The script described as the sole guard of the first release had been dead from the day it was written. The real guard is an explicit verify step in the release workflow.'
+- question: 'How do I check that a release gate actually works?'
+  answer: 'For each check that gates a release, ask what would turn it red, then make that happen once on purpose. We added a required property to one schema as a scratch change, confirmed the gate failed with the expected diagnostic, and reverted it. Also ask who reads the check''s output.'
 slug: the-compatibility-check-that-only-checked-itself
 redirects: []
 listen:

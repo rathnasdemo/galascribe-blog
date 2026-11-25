@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2027-03-21'
 createdAt: '2026-10-25T17:12:26.000Z'
+summary: 'A cache of check results in our outreach tool had a key that left out the checks themselves, so fixing a check changed no cached verdict. We widened the key twice, first with a digest of the checks module and then with a digest of both files that do the judging, and we stopped caching failures caused by the machine. The post ends with a three-question test for any cache key.'
+faq:
+- question: 'What should a cache key include?'
+  answer: 'Everything that can change the answer. Ask whether the code that computes the answer is in the key, whether the configuration is, and whether an error can get stored.'
+- question: 'Why did fixing a check not change cached results in Galascribe''s outreach tool?'
+  answer: 'The key held the draft, the transcript, the faithfulness result and the checks settings, but not the code of the checks. The key for every checked draft stayed the same, so the old verdict came straight back.'
+- question: 'How did Galascribe put the checking code into the cache key?'
+  answer: 'First the key gained the first 16 hexadecimal characters of a SHA-256 of the checks module''s source. A day later a function that hashes a list of named source files replaced it, once we found a second file also decided what passes.'
+- question: 'Should a cache store failures caused by the environment?'
+  answer: 'No. A verdict on the text is a fact about the text and can live as long as the text and the judge are unchanged. A failure of the environment is a fact about the machine at that moment, so our tool deletes such a cached result and checks the draft once more.'
+- question: 'Is the list of files in the digest guaranteed to be complete?'
+  answer: 'No. The list is written by hand, and if a third file ever starts deciding what passes, nothing will tell us to add it. We have only made the list explicit.'
 slug: a-cache-key-must-include-the-judge
 redirects: []
 listen:

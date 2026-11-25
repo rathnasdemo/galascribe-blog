@@ -17,6 +17,19 @@ tags:
 status: published
 createdAt: '2026-10-21T03:49:38.000Z'
 publishedAt: '2026-11-06T08:03:55.888Z'
+summary: 'A post passes through your browser, the Galascribe API, your site repository on GitHub and a publish workflow that runs in that same repository. A saved draft is a change branch in your repository, publish merges the pull request by default, and the app says live only after the public site serves the build''s marker file. Only the first of three planned verification tiers is built.'
+faq:
+- question: 'Where is my draft stored in Galascribe?'
+  answer: 'Before the first save, on your device, as an encrypted copy in your browser''s storage. Once saved, it lives in your own site repository on a change branch, not in our database, which holds only paths, blob ids, sizes and digests.'
+- question: 'What happens when I press Publish in Galascribe?'
+  answer: 'By default the pull request is merged through the Galascribe GitHub App, with no review step. The publish workflow in your repository then builds the site and deploys it to GitHub Pages, and reports a receipt back to Galascribe.'
+- question: 'When does Galascribe say a post is live?'
+  answer: 'Only after it fetches a marker file from the public site and the artifact id, artifact digest and generation id match the ones it certified. A receipt only says the workflow ran, not that visitors are served the result.'
+- question: 'What happens if two people edit the same Galascribe post?'
+  answer: 'The API refuses with the live head instead of overwriting. Edits to different lines are merged, and where the same lines were edited the browser shows three versions and you keep yours or theirs per field. The server never writes conflict markers into a repository.'
+- question: 'Is the Galascribe editor preview the same as the published page?'
+  answer: 'Not exactly. The preview is drawn in your browser with the same Markdown library and the theme''s published CSS, and it is labelled with the words that your published page may differ slightly.'
+updatedAt: '2026-11-25T18:00:00.000Z'
 slug: write-preview-publish-how-a-post-becomes-a-page
 redirects: []
 listen:

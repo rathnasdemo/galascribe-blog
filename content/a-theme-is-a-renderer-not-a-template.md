@@ -17,6 +17,17 @@ tags:
 status: published
 createdAt: '2026-10-21T04:12:17.000Z'
 publishedAt: '2026-11-08T08:04:36.702Z'
+summary: 'A Galascribe site is built from your content, a theme and a renderer called the template. The template owns layout, a theme supplies typed values such as 116 tokens, and the lock file in your repository decides which theme version a build uses. The strictness costs us work, and serving two theme generations at once is a proposal that is not built yet.'
+faq:
+- question: 'What does a Galascribe theme control?'
+  answer: 'A theme supplies values, not layout. It is a package of files: theme.json, tokens.css, components.css, an optional utilities.css, print.css and any passive assets. theme.json declares 116 typed tokens with a light and a dark value each.'
+- question: 'Which theme does a Galascribe build use?'
+  answer: 'The one named in the lock file in your site repository, not whatever is newest. gala/appearance.json holds your choice as a range, and gala.lock.json holds the exact resolved rows for the schemas package, the template and the theme.'
+- question: 'What happens if a theme does not match the lock or the contract?'
+  answer: 'The build is refused instead of falling back to something close. Refusals cover a bad digest, a template range that excludes the renderer, an exceeded size budget, an invalid theme.json and, since template 4.1.0, a theme with no palette block.'
+- question: 'Which themes does Galascribe have?'
+  answer: 'Default, Amaze, Flashy, Minimal and Zebra, plus Editorial, which was added as a sixth theme. Template 4 carries five layout directions: Editorial, Personal, Newsletter, Visual and Developer.'
+updatedAt: '2026-11-25T18:00:00.000Z'
 slug: a-theme-is-a-renderer-not-a-template
 redirects: []
 listen:

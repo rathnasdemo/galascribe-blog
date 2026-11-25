@@ -16,6 +16,16 @@ tags:
 status: draft
 publishAfter: '2027-01-10'
 createdAt: '2026-10-25T04:01:09.000Z'
+summary: 'Four times between 2026-10-12 and 2026-10-23, one half of a pinned pair in a Galascribe site moved without the other: the caller workflow commit or the lock file. On 2026-10-23 a new adapter release made publishes fail with LOCK_ADAPTER_IDENTITY_INVALID until we reverted. Every writer of a caller pin now goes through one gate that answers keep, move or hold.'
+faq:
+- question: 'What are the caller and the lock in a Galascribe site?'
+  answer: 'The caller is a small workflow file that runs the publish workflow at a full 40-character commit of our publish repository, which identifies the toolchain. The lock, gala.lock.json, records the exact schemas, template, theme and adapter rows the site was resolved against. The build takes its theme from the lock.'
+- question: 'What caused LOCK_ADAPTER_IDENTITY_INVALID on 2026-10-23?'
+  answer: 'A new adapter version reached npm at 12:46 UTC and a pin round changed the toolchain catalog and callers. The live API had not been deployed with the new catalog, so it still wrote the old adapter row into new locks while the sweep moved callers forward. We reverted all three repositories by 13:21.'
+- question: 'How does the keep, move or hold gate work?'
+  answer: 'Every path that writes a caller pin goes through one gate. It moves a caller only when the template contract matches, the theme has a catalog release for that contract, and every adapter row is admitted by both the API''s code catalog and the platform database''s admission table. A hold writes nothing and logs a typed reason.'
+- question: 'How do I avoid pinned pairs drifting apart?'
+  answer: 'List every pair of values that must agree, such as a caller and a lock, a client and a schema, or a migration and a catalog entry. For each, write down who writes each half and on what trigger, and route every writer through a function that proves the other half and may answer hold.'
 slug: the-callers-moved-the-locks-did-not
 redirects: []
 listen:

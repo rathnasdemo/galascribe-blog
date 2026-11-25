@@ -16,6 +16,16 @@ tags:
 status: draft
 publishAfter: '2027-04-16'
 createdAt: '2026-10-25T17:12:26.000Z'
+summary: 'On 2026-09-25 we found 93 definition names copy-pasted across the 20 files of our schema package, with nothing checking that the copies still agreed. A new check showed that 13 had already drifted apart under the same name. Some drift was accidental and was reconciled to one body, and some was deliberate and was given its own name. A build gate now fails when two copies of a name differ.'
+faq:
+- question: 'What happens when the same definition name is copied into several schema files?'
+  answer: 'The copies can drift apart while readers assume the name means the same thing everywhere. In our schema package, 13 of 93 copied names had drifted before we checked.'
+- question: 'How does Galascribe check that copied schema definitions stay identical?'
+  answer: 'A script groups every file''s definitions by name and fails the build if any name has more than one distinct body. It runs in the package''s build and in the fast gate of continuous integration.'
+- question: 'Should I fix drifted generated schema files by hand?'
+  answer: 'No. We fixed the generator sources and not the generated JSON, because the files in the repository are output and hand edits would be undone at the next build.'
+- question: 'What should I do when two copies of a definition must differ?'
+  answer: 'Make the difference visible in the name. A name that means two things gets two names, and a name that means one thing gets one body.'
 slug: 93-copies-13-had-drifted
 redirects: []
 listen:

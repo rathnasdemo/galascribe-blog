@@ -16,6 +16,16 @@ tags:
 status: draft
 publishAfter: '2027-03-07'
 createdAt: '2026-10-25T17:12:26.000Z'
+summary: 'Tests that pin a hand-edited number, such as migration counts, an object manifest and line-based checkstyle suppressions, conflict on every merge and force follow-up commits that change no behavior. As of 2026-10-25, 140 of the API''s 939 commits touched the manifest file. We have not fixed it yet. We would pin properties, derive the manifest from the migrations and suppress by pattern.'
+faq:
+- question: 'Why do tests that count migrations cause merge conflicts?'
+  answer: 'Two branches that each add a migration are green alone, but each re-derives the pinned counts for main plus itself. Whichever merges second conflicts on every pinned line, and the right answer is main plus both, which neither branch computed.'
+- question: 'What do the object manifest and rollback-depth tests check?'
+  answer: 'The object manifest lists every relation, routine, trigger and index the migrations create and is compared with a real Postgres after migrating from empty. The rollback-depth test writes the depth as a literal that must include every release added since.'
+- question: 'Are tests that pin database counts worthless?'
+  answer: 'No. On 2026-09-17 a contract test for the migration 0039 precondition caught a check that read information_schema.role_table_grants, which would have admitted the grant on exactly the database it was written to refuse. The cost came from hand-editing around the test.'
+- question: 'What would Galascribe pin instead of counts?'
+  answer: 'A property, such as rolling back the last changeset leaves no object that was not there before. Also derive the expected set from the migrations, suppress by annotation or pattern rather than line number, and give each branch its own file for any count that must stay. We have not made this change.'
 slug: the-test-that-counts-migrations
 redirects: []
 listen:

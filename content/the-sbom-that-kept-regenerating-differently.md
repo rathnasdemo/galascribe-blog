@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2027-03-28'
 createdAt: '2026-10-25T17:12:26.000Z'
+summary: 'Our committed SBOM files kept regenerating differently on a local machine and in CI, and the same Regenerate the SBOM commit recurred from 2026-09-26 to 2026-10-22. The theme SBOM described the wrong package, so it is now built from the theme''s name and version alone. For other packages, npm masks token-like path segments such as a UUID directory, which silently degraded the regenerated file.'
+faq:
+- question: 'What is an SBOM?'
+  answer: 'A software bill of materials: a JSON list of the components a package contains. We commit one next to each package, and a freshness check regenerates it and compares. That only works if regeneration is repeatable.'
+- question: 'Why did the theme SBOM drift between a local machine and CI?'
+  answer: 'It came from a CycloneDX scan of the theme tooling''s own lockfile, attributed to the theme''s identity, so it described another package''s development tree. The output depended on which cyclonedx-npm and cyclonedx-library release the scan resolved to.'
+- question: 'How does Galascribe generate the theme SBOM now?'
+  answer: 'It is built from nothing but the theme''s own name and version, with zero dependency components, no tool invocation and no lockfile read. It is no longer committed. The release workflow generates it and uploads it as a build artifact.'
+- question: 'Why did a regenerated SBOM lose its root component?'
+  answer: 'npm ls masks path segments that look like tokens, such as a UUID directory, with asterisks. The CycloneDX tool then cannot read the root package file, and the SBOM silently loses the root component''s description, engine constraints and private flag. The check now names this cause.'
+- question: 'Why did theme digests differ between two checkouts?'
+  answer: 'The README is part of every theme''s npm tarball, so it is part of the digest. Two checkouts with different READMEs legitimately produced different digests. We added a test that locks in that behavior.'
 slug: the-sbom-that-kept-regenerating-differently
 redirects: []
 listen:

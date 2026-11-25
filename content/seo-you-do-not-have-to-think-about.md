@@ -17,6 +17,19 @@ tags:
 status: published
 createdAt: '2026-10-21T04:12:17.000Z'
 publishedAt: '2026-11-20T08:01:06.799Z'
+summary: 'We audited a live test site built on our template and fixed what it found. Every public page now has one canonical address ending in a slash, so the sitemap lists no address that a redirect would serve. Authors write their own search titles and descriptions, choose a social image and can hide a post from search engines. The fixes are in template 4.3.0 and schemas 3.12.0.'
+faq:
+- question: 'How does Galascribe handle canonical addresses and the sitemap?'
+  answer: 'Under the default route profile every public page address ends in a slash, and the root stays /. The same form is used in the canonical link, og:url, sitemap, feeds, llms files, structured data, search index and internal links, so the sitemap lists nothing a redirect would serve.'
+- question: 'Can I write my own search title and description on Galascribe?'
+  answer: 'Yes. A post''s subtitle is its default search description, and the editor lets a post override both that and its search title. The title override allows up to 70 characters and the description override up to 300.'
+- question: 'How do I set the image shown when a Galascribe site link is shared?'
+  answer: 'Upload a default social image in Settings as PNG, JPEG or WebP; we recommend 1200 by 630 pixels. A post can choose its own image from the pictures in its body or its hero, or upload one.'
+- question: 'How do I hide a post from search engines on Galascribe?'
+  answer: 'Use the per-post switch. A hidden post stays listed on the site and sends noindex, follow, and it is left out of the sitemap, feeds, llms files and search index. That differs from an unlisted post, which is reachable by link and left out of the site''s lists.'
+- question: 'Does Galascribe promise more search traffic?'
+  answer: 'No. None of this promises traffic. It removes avoidable mistakes, so that what a crawler or a link card reads is what you wrote.'
+updatedAt: '2026-11-25T18:00:00.000Z'
 slug: seo-you-do-not-have-to-think-about
 redirects: []
 listen:

@@ -16,6 +16,18 @@ tags:
 status: draft
 publishAfter: '2027-01-24'
 createdAt: '2026-10-25T04:01:09.000Z'
+summary: 'Galascribe''s record of which API image production serves moved on 2026-09-27 from a field in a git manifest to two registry tags, production and production-previous. The deploy writes them last, only after the host confirms the new image and the health canary answers. Rollback is a redeploy of the digest behind production-previous, never a rebuild.'
+faq:
+- question: 'How does Galascribe record which image production is serving?'
+  answer: 'Two mutable tags on the API repository in the container registry. The production tag points at the digest the host is serving and production-previous points at the digest it served before the last switch. Only the API deploy writes them, and it writes them last.'
+- question: 'When does the deploy write the registry tags?'
+  answer: 'After the host confirms the new image is serving and the health canary answers. If the deploy rolls back by itself, the recording step is skipped, so the registry never names a digest the host has stopped serving. If the recording step fails, the job fails.'
+- question: 'How does a Galascribe rollback work?'
+  answer: 'A rollback is a redeploy of the digest behind production-previous, never a rebuild, so the code is byte for byte what ran before. It restarts the previous code without touching the database, which is safe while migrations follow expand-then-contract.'
+- question: 'Why keep the deploy record in the registry instead of git?'
+  answer: 'Which image runs in production is something that happens, not something we author. A git field needed a commit in a second repository for every release and could only say what someone last wrote down. The registry is where the images already live.'
+- question: 'Can the registry tags serve as an audit log?'
+  answer: 'No. They are pointers, not history. They show what is served now and what was served one step ago, and anyone with registry write access can move them, so we do not use them to answer what ran last Tuesday.'
 slug: the-deploy-record-is-a-registry-tag
 redirects: []
 listen:

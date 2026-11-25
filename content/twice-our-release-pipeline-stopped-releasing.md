@@ -16,6 +16,16 @@ tags:
 status: draft
 publishAfter: '2027-03-12'
 createdAt: '2026-10-25T17:12:26.000Z'
+summary: 'On 2026-10-11 a schema release commit removed the npm publish job, and it took 4 hours 47 minutes to restore it. The same evening, the theme tooling''s tests forbade the publish job its themes needed. The lesson: a release pipeline needs a test that it still publishes, and a new safety rule should be run against the thing it protects.'
+faq:
+- question: 'How can a release workflow stop publishing without anyone noticing?'
+  answer: 'On 2026-10-11 a commit touching 69 files and adding more than 22,000 lines renamed our publish job to package. The workflow then only built a tarball and sent nothing to npm. The workflow change was a small part of a large diff.'
+- question: 'What test should a release pipeline have?'
+  answer: 'One test that it still publishes: the publish job exists, runs after the gate, has the permissions and environment it needs, and runs the command that sends the package to the registry. If a shape test can pass with the publish job deleted, it is a packaging test.'
+- question: 'What was wrong with the theme tooling''s no npm publish rule?'
+  answer: 'Its 0.5.0 tests asserted that no theme release workflow carried npm publish authority, but the themes are published to the registry from their release.yaml. Release 0.5.1 changed the tests from forbidding the publish job to requiring it, with its ordering.'
+- question: 'How does the Galascribe schema release workflow guard against unpublished versions now?'
+  answer: 'Since 2026-10-23 it checks, before install and the gate, whether the version is on npm. A push that touches a packed path without a new version fails with an error naming the paths and the bump instruction, instead of ending green with the content unpublished.'
 slug: twice-our-release-pipeline-stopped-releasing
 redirects: []
 listen:

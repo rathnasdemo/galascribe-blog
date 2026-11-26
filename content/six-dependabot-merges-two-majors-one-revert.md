@@ -72,4 +72,4 @@ What we cannot tell you is whether anything shipped from the bad main during tho
 
 Open your repository settings and answer three questions. Can your dependency bot merge, or only open pull requests? Does CI run on its pull requests before a human sees them? Which of your dependencies would you refuse a major version of, and have you told the bot? If you cannot answer the last one, start with the packages that your tests or lockfile pin to an exact version. The bot will find them for you on its first run, as it did for us.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

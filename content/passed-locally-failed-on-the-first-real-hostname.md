@@ -79,4 +79,4 @@ Each of these three failed the same way: the check ran in an environment that co
 
 How long the deployment was unusable, and whether any user reached it in that state, is not stated in our records.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

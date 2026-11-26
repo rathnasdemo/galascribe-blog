@@ -105,4 +105,4 @@ A post is a long-lived thing. Plain Markdown and JSON in a git repository can be
 
 It also narrows what you have to trust us with. GitHub holds the repository and enforces who can touch it, and GitHub's own build minutes do the publishing. What you grant us is a set of permissions for the Galascribe GitHub App in your own account, not custody of your work.
 
-To start a site of your own, the start flow is at https://app.galascribe.com/
+To start a site of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

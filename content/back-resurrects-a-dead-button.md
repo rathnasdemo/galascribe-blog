@@ -71,4 +71,4 @@ Do it by hand once: click through to the other site, press Back, and look at the
 
 We do not know how many people met the dead button before we fixed it. The commits do not say, and no user report is cited. That is the reason to press Back yourself before someone writes in.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

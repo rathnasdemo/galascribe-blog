@@ -71,4 +71,4 @@ One limit to state plainly: as of 2026-10-18 every claim had been a rehearsal on
 
 If you do claim a site, three things are worth verifying afterwards. The repository should be listed under your GitHub account or organisation, not ours. Your Google account's third-party access page should not list Galascribe, because we revoked the access when the check finished. And your site should not be asking search engines to stay away: the Disallow rule lives on our preview host, so it applies to nothing on yours unless you add it.
 
-To start a site of your own, the start flow is at https://app.galascribe.com/
+To start a site of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

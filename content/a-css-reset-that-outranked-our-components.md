@@ -81,4 +81,4 @@ Two limits stood when we wrote the audit up. It was a run, not a permanent gate:
 
 If you keep a stylesheet of your own, list the resets and count the specificity of each one. Any reset at (0,1,1) or higher will beat a single-class component rule inside the same layer. Wrap the reset in `:where()`, put it before the components, and add a test that fails when someone adds one that is not. When you scan the result, wait for transitions to finish and scan the states a reader reaches, not only the page as it loads.
 
-To set up a site of your own, the start flow is at https://app.galascribe.com/
+To set up a site of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

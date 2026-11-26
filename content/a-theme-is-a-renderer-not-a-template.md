@@ -106,4 +106,4 @@ A site here lives in your repository and builds in a workflow you can read. If t
 
 Splitting the page from its values has a second payoff: a theme becomes checkable data, so what a theme may contain can be tested before it ships.
 
-To start a site of your own, the start flow is at https://app.galascribe.com/
+To start a site of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

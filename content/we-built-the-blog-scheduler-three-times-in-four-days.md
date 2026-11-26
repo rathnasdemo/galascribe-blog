@@ -83,4 +83,4 @@ Between 2026-10-20 and 2026-10-24 that came to two repositories and three implem
 
 If you are about to build a scheduler, a notifier, an exporter or any other piece of plumbing for your own product, write down the customer who would want the same thing before you write the first line. If you can name one, build it as a product feature, with the same review rules and the same screen, and use it yourself. If you cannot name one, build the small version in the place your own content already lives, not in a tool you built for something else.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

@@ -81,4 +81,4 @@ The mechanics apply to any GitHub Pages project site, with or without us.
 3. Budget up to 24 hours for the certificate, and treat a "new certificate" notice after adding `www` as routine.
 4. After the address changes, publish once and open the site in a fresh browser.
 
-If your DNS is on Cloudflare, the Domain page will add the records for you. To try it on a site of your own, the start flow is at https://app.galascribe.com/
+If your DNS is on Cloudflare, the Domain page will add the records for you. To try it on a site of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

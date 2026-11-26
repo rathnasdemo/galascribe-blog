@@ -77,4 +77,4 @@ Our browser checks of the connect, install and link flow make assertions, 34 of 
 
 If you are adding "connect GitHub" to a product, write next to each GitHub call which token class it needs, and log the class (a prefix, never the token) wherever you receive one. Then decide what a 403 means before you ship. Ours meant "this credential can never work here", and no amount of signing in again can answer that.
 
-To link a repository of your own, the start flow is at https://app.galascribe.com/
+To link a repository of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

@@ -75,4 +75,4 @@ How long the site was unusable, and whether any user saw it, is not stated in ou
 
 If your pipeline passes secrets into a reusable workflow, list the names your product cannot work without, in one place, and fail the deploy before the first side effect if any is empty. Make the message say which repository and environment to fix. Then add a check that exercises the capability, not just the process, so the next gap shows up in your pipeline instead of in front of a person.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

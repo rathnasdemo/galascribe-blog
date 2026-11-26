@@ -116,4 +116,4 @@ We left out popups, frames, cross-window messaging and FedCM. The spec records t
 
 Comments are plain text, with no images or formatting. A site without the configuration file is simply off. If our API is down, the article loads as before and the section says responses are unavailable. Without JavaScript there are no interactions at all.
 
-To set up a site of your own, the start flow is at https://app.galascribe.com/
+To set up a site of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

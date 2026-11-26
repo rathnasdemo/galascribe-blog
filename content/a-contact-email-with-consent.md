@@ -75,4 +75,4 @@ If you sign in to Galascribe, the Contact email card on the Account page tells y
 - Make withdrawal delete the secret and keep the refusal.
 - Let staff see that an address exists, never the address, and route every send through a queue that holds ids.
 
-To set up a site of your own, the start flow is at https://app.galascribe.com/
+To set up a site of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

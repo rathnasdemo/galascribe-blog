@@ -75,4 +75,4 @@ The failed applies are cited by run number in three commits. How many deploys we
 
 If you have ever fixed production by hand, you have a list like ours. Start with what the state does not contain: list the resources in the provider's console against the resources in state. Then, for each difference, decide whether to adopt, delete or document it, and write the decision in a commit. Finally, find every apply that can be triggered by someone who is not thinking about production, and put anything that needs a human behind an explicit switch that defaults off.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

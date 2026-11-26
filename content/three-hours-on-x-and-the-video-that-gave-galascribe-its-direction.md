@@ -94,4 +94,4 @@ None of this asks writers to give up reach. Post your links wherever your reader
 
 Sandeep closes his video with a line I keep coming back to: you don't write just to find words, you write to find out what you think. Writing this post, I found out what I think. Galascribe exists so that night in July happens to fewer people, and so the writing they find instead sounds like a person.
 
-To start a site of your own, the start flow is at https://app.galascribe.com/
+To start a site of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

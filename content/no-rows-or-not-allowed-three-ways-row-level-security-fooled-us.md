@@ -75,4 +75,4 @@ The first real-Postgres run over 2026-09-27 and 2026-09-28 found problems we had
 
 Search your code for every `if (result.isEmpty())` or `orElse(...)` that sits after a query on a table with row-level security. For each one, ask whether the empty case can mean "you may not see it". If it can, either make the empty case an error that names the possibility, or make sure the tenant context is set before the query runs. Then write the test that runs as the real role, with rows in two tenants, and watch it fail first.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

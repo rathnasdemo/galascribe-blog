@@ -71,4 +71,4 @@ None of this was the drift itself. It is what we found while looking at the same
 
 If you copy a definition between files, whether it is a schema type, a regular expression or a constant, add the test that proves the copies are still equal on the same day, not when someone next notices. If the language lets you define it once and reference it, do that instead. If two copies must differ, make the difference visible in the name.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

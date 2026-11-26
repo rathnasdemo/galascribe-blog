@@ -71,4 +71,4 @@ Our records do not say whether a bad release ever shipped because the catalogue 
 
 For each check that gates a release, ask what would turn it red, and then make that thing happen once on purpose. If you cannot name a change that fails the check, or the only changes that fail it are changes to the check, it is not protecting anything. Then ask who reads its output. A catalogue nobody imports and a script npm never runs are the same failure from two directions.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

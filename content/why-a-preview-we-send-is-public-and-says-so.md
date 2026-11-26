@@ -79,4 +79,4 @@ Before the first message goes out, check that it says five things, in plain word
 
 Then put the wording where a test can see it, so that changing the plan forces a visit to the words. Ours is compared character for character now, which means any change to the promise is a code change that somebody has to review.
 
-To start a site of your own, the start flow is at https://app.galascribe.com/
+To start a site of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

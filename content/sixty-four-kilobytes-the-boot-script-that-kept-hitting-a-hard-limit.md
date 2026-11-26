@@ -71,4 +71,4 @@ How many servers were replaced across the whole period, and what that cost, is n
 
 Look at the size of your user data or equivalent boot payload today, and at how much it grows per commit. If it is within a factor of two of the cap, do not compress it again: move the payload out, fetch it by content hash and verify before running. Then look at what your infrastructure tool considers a reason to replace a machine, and make sure the answer is a short list you chose, not everything that happens to be rendered into the machine.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

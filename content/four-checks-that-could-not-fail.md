@@ -79,4 +79,4 @@ Three habits came out of the four:
 
 A gate you have never seen fail is a hypothesis about the gate, not a result.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

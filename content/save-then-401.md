@@ -79,4 +79,4 @@ That split is the design we would suggest: reads need a session; actions confirm
 3. **Every success word is a claim.** "Published", "saved", "live" should come from a read that verified it. Give "I do not know yet" its own label.
 4. **Do not lengthen a window to fix a flow.** If the prompt arrives at a bad moment, move the prompt.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

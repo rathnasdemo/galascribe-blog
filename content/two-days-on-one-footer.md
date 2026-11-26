@@ -71,4 +71,4 @@ A feature is finished when a real live site renders it after the exact button se
 
 The second rule is narrower. When a server change alters the set of values it serves, such as catalog rows, enum members or versions, search every client that consumes them and add a test with the new values. No App test used the new values, so none could have failed.
 
-To set up a site of your own, the start flow is at https://app.galascribe.com/
+To set up a site of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

@@ -83,4 +83,4 @@ What we would reuse is the checklist for any loop guard:
 - **What proves the thing it guards finished?** "Started" and "completed" are different values. Only the second may trigger a terminal state.
 - **Which path wipes it?** Every failure exit needs to clear it.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

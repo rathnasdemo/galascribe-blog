@@ -69,4 +69,4 @@ It did not end the incidents. Fixes to the deploy path kept landing after 2026-0
 
 Before the first real deploy of anything, boot a disposable copy of the real target and run every verb on it, from the identity and shell it will really use. Your first real deploy is a test suite whether you planned one or not; the question is whether it runs against production.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

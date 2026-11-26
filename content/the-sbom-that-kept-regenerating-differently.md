@@ -71,4 +71,4 @@ The cause was content. A README is part of every theme's npm tarball, so it is p
 - When a freshness check fails, make it say why. "Stale" sent us to commit a degraded file; a message naming the environment would have sent us to move the checkout.
 - Before fixing a flaky thing, reproduce it dozens of times. We ran the path test 30 times and the full suite 15 times, found no failure, and learned that the two inputs differed.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

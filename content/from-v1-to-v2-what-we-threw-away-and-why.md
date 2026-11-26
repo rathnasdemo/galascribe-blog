@@ -105,4 +105,4 @@ Deleting the screens did not delete everything they left behind. Our own invento
 
 The cleanup list is ranked and most of it needs no decision, only time. We would rather print the list than let the deleted interface go on shaping what we say.
 
-To start a site of your own, the start flow is at https://app.galascribe.com/
+To start a site of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

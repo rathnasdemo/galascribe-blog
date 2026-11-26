@@ -105,4 +105,4 @@ The cause recorded in our content-journey incident review was a single mismatch.
 
 The review's checklist runs in this order. We reproduced the mismatch with a failing API test, then made the API normalise the revision before database admission while keeping the tagged value on the wire. Nineteen targeted API document and asset tests passed, with formatting and style checks, and 183 browser checks across the source, content, review, release and publish journeys passed, at desktop and mobile widths where applicable. The fixed API image was promoted to production, and the image being served and an API canary were verified. One item was still open when the review was written: a signed-in person clicking the proposed-version link in production, which needs a real user session.
 
-If you want to try the path yourself, the start flow is at https://app.galascribe.com/
+If you want to try the path yourself, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

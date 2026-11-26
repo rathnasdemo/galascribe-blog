@@ -75,4 +75,4 @@ The same rule applies to any smoke test, end-to-end test or browser check of a f
 
 And when a check goes red within ten minutes of a previous deploy, read the `age` header before you read your code.
 
-To run a publish on a site of your own, the start flow is at https://app.galascribe.com/
+To run a publish on a site of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

@@ -78,4 +78,4 @@ We do not mix this mail with our product's mail. Cold outreach goes from a separ
 
 If you are about to send your own first cold campaign, copy three things before anything else. Set the ceiling well below what you could send. Write the stop rule as code and test it on real replies, including the ones that only look like refusals. And make the system complain when it does nothing.
 
-To set up a site of your own, the start flow is at https://app.galascribe.com/
+To set up a site of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

@@ -73,4 +73,4 @@ Whether anyone was reading the red during those eight days is not stated in our 
 - **Allowlist by exact line or fingerprint, and put the reason next to the entry.**
 - **Run your gate from a fresh checkout on a clean runner image** before believing it. The lock file and the revision test were both green only on a machine that differed from the runner.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

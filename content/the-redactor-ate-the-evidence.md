@@ -69,4 +69,4 @@ Both redactors failed quietly in opposite directions: one removed the reason, th
 
 If you run one, write the test that starts at the failure and ends where you read it. Cause a refusal, run the real log pipeline, and assert that the reason is in the output. Add a hostile input to the redactor itself, and assert the output keeps everything except the secret. Then choose your field names knowing the rules, so a reason code is never filed under a key the redactor treats as sensitive.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

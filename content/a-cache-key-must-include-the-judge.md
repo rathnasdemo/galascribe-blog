@@ -77,4 +77,4 @@ Before you add a cache, list everything that can change the answer, then ask thr
 
 Then write the test that proves each one: change the code, change the settings, break the environment, and confirm the key moved or the result was not kept. Two of ours, the digest of the checks module and of the summary rules, have such a test. How many nights or articles the stale verdicts affected is not stated in our records.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

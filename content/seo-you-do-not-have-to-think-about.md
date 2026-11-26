@@ -106,4 +106,4 @@ Fixed, here, means released and checked on a local stack: the renderer changes a
 
 A navigation editor, `hreflang` (the model has no translations), per-author search fields and a sitemap index for very large sites are out of scope. None of this promises traffic. It removes avoidable mistakes, so that what a crawler or a link card reads is what you wrote.
 
-To try this on a site of your own, the start flow is at https://app.galascribe.com/
+To try this on a site of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

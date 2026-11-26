@@ -72,4 +72,4 @@ The price is that a workstation is now our deploy server, and no pull request or
 
 Write down the unit the limit is counted in, price your routine action in that unit, and multiply by how often you really do it. We had not done that sum. The unit was minutes, the action was a push, the price was 15 to 20 of 2,000, and the answer was three or four pushes a day.
 
-To set up a site of your own, the start flow is at https://app.galascribe.com/
+To set up a site of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

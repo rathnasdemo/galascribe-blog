@@ -83,4 +83,4 @@ Tokens are spent only on creators who clicked. Unclaimed sites stop existing, be
 - A failed check caused by the environment is a failed check, not a verdict. Clear it with the fix, and show the writer the reason, not one word.
 - Keep the check that says no, even when it costs tokens. The three drafts it rejected were the only ones that would have embarrassed us.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

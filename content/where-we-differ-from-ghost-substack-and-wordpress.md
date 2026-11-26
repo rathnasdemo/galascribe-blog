@@ -71,4 +71,4 @@ If you want to email subscribers and charge for it from one place today, use Gho
 
 If your first requirement is that your archive sits in a repository you control, and you can do without email delivery and payments for now, that is what we built.
 
-Whichever you pick, run one test before you commit: ask what you would be holding if the company disappeared tomorrow, then do the export or the clone today and open the result. If you want to try ours, the start flow is at https://app.galascribe.com/
+Whichever you pick, run one test before you commit: ask what you would be holding if the company disappeared tomorrow, then do the export or the clone today and open the result. If you want to try ours, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

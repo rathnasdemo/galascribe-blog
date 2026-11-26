@@ -80,4 +80,4 @@ Three days later, on 2026-09-28, a second review looked at critical issues only 
 5. Compare what you publish with what your exports reference.
 6. Pick one claim in your README and find the line that enforces it.
 
-To set up a site of your own, the start flow is at https://app.galascribe.com/
+To set up a site of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

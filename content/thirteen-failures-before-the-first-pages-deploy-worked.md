@@ -77,4 +77,4 @@ Four smaller rules came with it:
 
 If you are about to write a validator for something a CI provider hands you, whether a token, a digest or an upload, write the scratch workflow first. It is cheaper than finding the answer one failed deploy at a time.
 
-To run a publish on a site of your own, the start flow is at https://app.galascribe.com/
+To run a publish on a site of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

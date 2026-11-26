@@ -72,4 +72,4 @@ We have not made this change, and we are not claiming a fix. What we would do:
 
 If your own suite has a test that fails on every merge until someone bumps a literal, count how many commits changed that literal in your history. The command is one line of `git log` on the file. If the answer is in the dozens, the literal is not guarding anything; the property behind it is. Write that instead.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

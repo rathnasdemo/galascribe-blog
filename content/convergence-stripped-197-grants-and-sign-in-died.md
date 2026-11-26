@@ -77,4 +77,4 @@ If you reset privileges and re-grant from a list, apply these three checks:
 2. Generate the list from the source of truth. If a human must keep it in step with the migrations, it will drift on the first release nobody remembers it for.
 3. Run the convergence, and the check that follows it, as the least privileged identity your production database uses, not as a superuser. Ours passed locally twice for exactly that reason.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

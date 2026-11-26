@@ -77,4 +77,4 @@ On 2026-10-18 we deleted the old interface. It had 35 routes and about 35,000 li
 
 You can run this audit on your own product with three checks, and they found most of what we found. Dump every user-facing string and count the words used for each noun and each failure; a concept with more than one name is a finding. For every promise on a screen, whether a role description, a button or an empty state, find the code that serves it; if nothing does, the promise is the bug. Follow every refusal that sends someone elsewhere ("update it in Settings") and stand in that place: can anything be pressed? The third check found our Connected screen.
 
-To start a site of your own, the start flow is at https://app.galascribe.com/
+To start a site of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

@@ -75,4 +75,4 @@ On 2026-10-23 the lock half bit us. A new Pages adapter, 0.1.2, reached npm at 1
 
 If you are designing a deploy that must hold no secret, start with two lists: the jobs that touch content you do not control, and the one job that has to prove who it is. Keep them apart. Then pin the code by commit and the inputs by integrity, move a caller and its lock together, and measure what GitHub sends you before you write a grammar for it.
 
-To watch a publish run, the start flow is at https://app.galascribe.com/
+To watch a publish run, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

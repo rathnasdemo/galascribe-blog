@@ -73,4 +73,4 @@ What we do not know: our records do not say how the failure first surfaced, how 
 
 If you have a producer and a consumer of a document, one test belongs to neither of them: run the producer's real output, from its real end-to-end tests, through the consumer's actual validator, including any constraint that spans two fields. If the consumer's rules live in a database, put that constraint in the test too. A mirror of the rules written by the producer's author will pass whatever the producer's author expected.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

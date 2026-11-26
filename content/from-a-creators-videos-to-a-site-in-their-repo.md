@@ -111,4 +111,4 @@ Captions mishear proper nouns. We list corrections and mark uncertain ones, but 
 
 Softening crude phrasing is an editorial hand on someone else's words, which is why every change is listed. Math is not rendered. And creators cannot start the route on their own.
 
-To start a site of your own, the start flow is at https://app.galascribe.com/
+To start a site of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

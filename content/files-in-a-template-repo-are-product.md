@@ -80,4 +80,4 @@ That gives you three checks before you add anything to a template:
 
 The first of those would have been enough. The CI we wanted for the template can live in the tooling directory, or in the publish toolchain's repository, aimed at the template. Neither puts a file in a customer's repository.
 
-To set up a site of your own, the start flow is at https://app.galascribe.com/
+To set up a site of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

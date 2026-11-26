@@ -80,4 +80,4 @@ The price of the decision shows in what we do not offer. GitHub Pages is the onl
 
 Before you put a publication on Pages, with us or without us, check three numbers against your own site: the size of the built output with every image, how long a full build and deploy takes, and your monthly traffic. If any of them is close to GitHub's limits, plan for that now, because today we have no other host to move you to.
 
-To start a site on GitHub Pages, the start flow is at https://app.galascribe.com/
+To start a site on GitHub Pages, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

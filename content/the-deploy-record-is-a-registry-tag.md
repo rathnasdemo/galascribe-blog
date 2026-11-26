@@ -74,4 +74,4 @@ A rollback is a redeploy of the digest behind `production-previous`. It is never
 
 If you keep your own deploy record, write down four answers. Who writes it? Ours is the deploy, and only after it has verified the host. What reads it, and what do those readers do when it is missing? Ours log that nothing has been deployed and carry on with a placeholder. What happens when a rollback runs mid-deploy? Ours skips the write, so the record cannot claim something false. And is it a pointer or a history? Ours is a pointer, which is why we do not use it to answer "what ran last Tuesday".
 
-To set up a site of your own, the start flow is at https://app.galascribe.com/
+To set up a site of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

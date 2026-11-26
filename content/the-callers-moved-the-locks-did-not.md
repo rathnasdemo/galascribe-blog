@@ -71,4 +71,4 @@ One thing is still open: adopting an adapter touches two repositories by hand, a
 
 If you pin things in your own system, apply this test. List every pair of values that must agree: a caller and a lock, a client and a schema, a migration and a catalog entry. For each pair, write down who writes each half and on what trigger, and ask what happens when only one half moves. If the answer is "a failure at the next run", route every writer of one half through a function that proves the other half and is allowed to answer hold. A hold that writes nothing and says why is cheaper than any repair.
 
-To start a site of your own, the start flow is at https://app.galascribe.com/
+To start a site of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

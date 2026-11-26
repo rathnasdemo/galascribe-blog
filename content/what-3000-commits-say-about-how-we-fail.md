@@ -89,4 +89,4 @@ One per class, kept short because a long checklist is not read. These are the qu
 
 The most useful thing we did was read the whole list at once. A bug found alone is an accident; the same bug found again and again is a missing habit, and a habit can be written down. Pick the three classes your own history shows most, search your commit subjects for their keywords, and write the one question for each.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

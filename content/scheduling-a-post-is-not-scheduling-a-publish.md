@@ -82,4 +82,4 @@ It does not hide the draft either. A dated draft is a file in your repository, a
 
 If you want a post live on a particular date, switch on Staggered release, pick the time zone you think in and put the date on the draft. If you need one change at an exact minute, the Schedule button still does that, one at a time.
 
-To set up a site of your own, the start flow is at https://app.galascribe.com/
+To set up a site of your own, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

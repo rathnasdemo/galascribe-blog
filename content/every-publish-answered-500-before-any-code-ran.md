@@ -81,4 +81,4 @@ The fix takes both timestamps from `statement_timestamp()`, which is fixed for t
 
 If your service has a framework between the network and your code (validation, binding, filters, serialisation), write one test per route that goes through the real stack, with a real HTTP-shaped request. It does not need to check much. It needs to prove a request reaches your handler. A test that calls the service directly cannot see a failure that happens earlier, however many of them you have.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

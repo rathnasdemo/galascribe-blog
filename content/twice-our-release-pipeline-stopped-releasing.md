@@ -73,4 +73,4 @@ First, a release pipeline needs one test that it still publishes. Not that it bu
 
 Second, when you tighten a safety rule, run it against the thing it protects. A rule that says "no publish authority here" is easy to write and easy to satisfy by never releasing.
 
-To build a site from your own videos, the start flow is at https://app.galascribe.com/
+To build a site from your own videos, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

@@ -107,4 +107,4 @@ Every preset's pass through each theme's bindings is proved by that test, not by
 
 A contrast audit found zero violations. By hand we measured one preset, Graphite, at 4.05 to 4.25:1 for muted meta text over the page glow in two themes, below our 4.5:1 aim, and it is not fixed yet.
 
-To set up a site and try the colour choices in Look, the start flow is at https://app.galascribe.com/
+To set up a site and try the colour choices in Look, the start flow is at [app.galascribe.com](https://app.galascribe.com/)

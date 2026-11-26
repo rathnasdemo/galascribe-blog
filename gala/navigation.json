@@ -51,6 +51,24 @@
       "label": "Compare",
       "url": "https://app.galascribe.com/compare",
       "children": []
+    },
+    {
+      "type": "external",
+      "label": "Features",
+      "url": "https://app.galascribe.com/features",
+      "children": []
+    },
+    {
+      "type": "external",
+      "label": "Markdown publishing platform",
+      "url": "https://app.galascribe.com/markdown-publishing-platform",
+      "children": []
+    },
+    {
+      "type": "external",
+      "label": "Writer website builder",
+      "url": "https://app.galascribe.com/writer-website-builder",
+      "children": []
     }
   ],
   "extensions": {}

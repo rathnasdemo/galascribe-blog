@@ -7,7 +7,7 @@ Show notes: the first-party record behind the video, from our own project notes.
 - About 350 review changes had been made to the deploy path before the outage. Each had been checked only against mocks; none had ever run on a real host.
 - Six layers failed on the real host, one after another: an admission gate that wanted an image digest committed to a manifest, the format of the key-escrow backup, a missing runtime directory for the candidate service unit, rootless containers that could not map user ids, an apply step that restarted a placeholder image, and the application's startup settings.
 - The deploy harness (a real throwaway server, the real image and database, every deploy verb called over SSH as the restricted user) was in use by 24 September; incidents continued after it.
-- Seven fixes, one per layer, were merged during the outage. The edge provider's bot protection blocked the CI runners' addresses, so the post-deploy health check now runs from the host itself.
+- Seven fixes were merged during the outage. The edge provider's bot protection blocked the CI runners' addresses, so the post-deploy health check now runs from the host itself.
 
 ## The agents, the same day
 - On 27 September the owner got a usage-limit warning, with barely anything moving in his own work. The cause was one incident session.

@@ -6,9 +6,11 @@ Show notes: the first-party record behind the video, from our own project notes.
 - On 26 September 2026 the Galascribe API went down at 16:36 and was serving again at 05:37 on 27 September, about 13 hours.
 - About 350 review changes had been made to the deploy path before the outage. Each had been checked only against mocks; none had ever run on a real host.
 - Six layers failed on the real host, one after another: an admission gate that wanted an image digest committed to a manifest, the format of the key-escrow backup, a missing runtime directory for the candidate service unit, rootless containers that could not map user ids, an apply step that restarted a placeholder image, and the application's startup settings.
+- The deploy harness (a real throwaway server, the real image and database, every deploy verb called over SSH as the restricted user) was in use by 24 September; incidents continued after it.
 - Seven fixes, one per layer, were merged during the outage. The edge provider's bot protection blocked the CI runners' addresses, so the post-deploy health check now runs from the host itself.
 
 ## The agents, the same day
+- On 27 September the owner got a usage-limit warning, with barely anything moving in his own work. The cause was one incident session.
 - On 27 September one incident session (a different incident from the outage, on the same day) spent several million tokens across helper agents while production stayed down and nothing had been deployed for hours.
 - Two implementers were resumed four or five times, at about 700,000 tokens each; two reviewers were resumed three times, at 200,000 to 290,000 each; four auditors ran on top.
 - The spending went on repeated implement, review, fix and re-review rounds.
